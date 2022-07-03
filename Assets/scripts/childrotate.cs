@@ -22,12 +22,12 @@ public class childrotate : MonoBehaviour
         float angle = Mathf.Atan2(-dir.x, dir.y) * Mathf.Rad2Deg;
         qua = obj.GetComponent<playermove2>().targetangle();
         
-        if (transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) <= 180 && transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) > 0)
+        if (transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) <= 180 && transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) > 0|| transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) <= 180 && transform.rotation.eulerAngles.z - angle_to_eulerangle(angle)<=-180)
         {
             Debug.Log(1);
-            target = transform.rotation.eulerAngles.z - angle_to_eulerangle(angle)>speed?transform.rotation.eulerAngles.z - speed: angle_to_eulerangle(angle);
+            target = transform.rotation.eulerAngles.z - angle_to_eulerangle(angle)>speed?(transform.rotation.eulerAngles.z - speed+360)%360: angle_to_eulerangle(angle);
         }
-        else if (transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) > 180 || transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) < 0)
+        else if (transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) > 180 || transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) < 0&& transform.rotation.eulerAngles.z - angle_to_eulerangle(angle)>-180)
         {
             Debug.Log(2);
             target = ((transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) < (-speed)|| transform.rotation.eulerAngles.z - angle_to_eulerangle(angle)>360-speed) ? transform.rotation.eulerAngles.z + speed : angle_to_eulerangle(angle))% 360 ;
