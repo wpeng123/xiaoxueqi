@@ -57729,6 +57729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MechaBall
       objectReference: {fileID: 0}
+    - target: {fileID: 5593696589209755875, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
+      propertyPath: anispeed
+      value: 0.33
+      objectReference: {fileID: 0}
     - target: {fileID: 7384137737458259292, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
       propertyPath: m_RootOrder
       value: 1

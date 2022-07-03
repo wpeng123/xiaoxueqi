@@ -24,7 +24,7 @@ public class playermove2 : MonoBehaviour
     void Update()
     {
         speed = Mathf.Sqrt(Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.x, 2) + Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.y, 2));
-        LookAt2D(this.GetComponent<Rigidbody2D>().velocity);
+        //LookAt2D(this.GetComponent<Rigidbody2D>().velocity);
         Tractive_force();
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -67,6 +67,12 @@ public class playermove2 : MonoBehaviour
                 checkover();
             }
         }
+    }
+    public Quaternion targetangle()
+    {
+        Vector2 dir = this.GetComponent<Rigidbody2D>().velocity;
+        float angle = Mathf.Atan2(-dir.x, dir.y) * Mathf.Rad2Deg;
+        return Quaternion.AngleAxis(angle, Vector3.forward); 
     }
     void LookAt2D(Vector2 dir)
      {

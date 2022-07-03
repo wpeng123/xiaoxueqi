@@ -97,6 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2513174264324725976}
   - component: {fileID: 5235548073617713614}
+  - component: {fileID: 7107824297263572487}
   m_Layer: 0
   m_Name: MechaBall
   m_TagString: Untagged
@@ -169,6 +170,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7107824297263572487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597190832525911341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ab44a2670eb15469bb4df1d11ecf97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 946307657693131723}
+  speed: 2
 --- !u!1 &8828560583702763207
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +195,8 @@ GameObject:
   - component: {fileID: 3892376648289867879}
   - component: {fileID: 957682460784400415}
   - component: {fileID: 7183320195343613726}
+  - component: {fileID: 4371832070827436877}
+  - component: {fileID: 5593696589209755875}
   m_Layer: 0
   m_Name: MechaBallTrack1
   m_TagString: Untagged
@@ -271,3 +288,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4371832070827436877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828560583702763207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23001da820d222f48bf14830479e5e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 946307657693131723}
+  speed: 1
+--- !u!114 &5593696589209755875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828560583702763207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d33ca624f6e284ea0238f84caecc2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
