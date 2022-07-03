@@ -56,13 +56,24 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enemy\SpikedCircleManager.cs" />
     <Compile Include="Assets\Scripts\trail.cs" />
+    <Compile Include="Assets\Scripts\Enemy\TowerManager.cs" />
     <Compile Include="Assets\Scripts\Ai_Move_main.cs" />
     <Compile Include="Assets\Scripts\checkover.cs" />
+    <Compile Include="Assets\Scripts\Enemy\ShellManager.cs" />
     <Compile Include="Assets\Scripts\playermove.cs" />
     <Compile Include="Assets\Scripts\moving_ani.cs" />
+    <Compile Include="Assets\Scripts\Enemy\CircleEnemyManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\TankManager.cs" />
     <Compile Include="Assets\Scripts\childrotate.cs" />
+    <Compile Include="Assets\Scripts\Enemy\SpikedManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EmitterManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\TankHeadManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\NestManager.cs" />
     <Compile Include="Assets\Scripts\playermove2.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MachineGunManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\BulletManager.cs" />
     <Compile Include="Assets\Scripts\childtrack.cs" />
   </ItemGroup>
   <ItemGroup>
