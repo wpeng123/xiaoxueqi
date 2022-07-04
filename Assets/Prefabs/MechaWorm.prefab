@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 323558951758144187}
   - component: {fileID: 2023976981981545302}
   - component: {fileID: 8658735157633026934}
+  - component: {fileID: 2198173231460478511}
   m_Layer: 0
   m_Name: MechaWorm
   m_TagString: Untagged
@@ -151,3 +152,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &2198173231460478511
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823346361459286322}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0015917718, y: -0.010504544}
+  m_Size: {x: 0.35418564, y: 1.1602517}
+  m_Direction: 0
