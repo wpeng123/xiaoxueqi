@@ -54,7 +54,7 @@ public class TowerManager : MonoBehaviour
         playermove2 ifplayer = other.collider.GetComponent<playermove2>();
         if (ifplayer != null)
         {
-            Debug.Log("1");
+            //Debug.Log("1");
             Death();
         }
     }

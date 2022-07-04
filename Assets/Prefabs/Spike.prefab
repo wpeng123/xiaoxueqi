@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 2577947284617342540}
   - component: {fileID: 7665768090398417536}
   - component: {fileID: 4416676994730940383}
+  - component: {fileID: 2098343598}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -528,3 +529,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2098343598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7305141991180726566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e44e93dec4dfdf44977a505b840fa9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 1000
