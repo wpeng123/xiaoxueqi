@@ -11,6 +11,7 @@ public class NestManager : MonoBehaviour
     public float speed;
     public float rotationSpeed;
     public float amount;//生成数量
+    public float acceleratedSpeed;
 
 
     void Start()
@@ -28,6 +29,7 @@ public class NestManager : MonoBehaviour
     {
         GameObject go = (GameObject)Instantiate(CircleEnemy);
         go.GetComponent<CircleEnemyManager>().speed = speed;
+        go.GetComponent<CircleEnemyManager>().acceleratedSpeed = acceleratedSpeed;
         go.GetComponent<CircleEnemyManager>().rotationSpeed = rotationSpeed;
         go.transform.parent = this.transform;
         go.transform.localPosition = Vector3.zero;

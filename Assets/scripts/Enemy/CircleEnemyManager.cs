@@ -8,6 +8,8 @@ public class CircleEnemyManager : MonoBehaviour
     private Vector3 targetPosition;
     public float speed;
     public float rotationSpeed;
+    public float acceleratedSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,7 @@ public class CircleEnemyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        speed += acceleratedSpeed;
         Move();
     }
 

@@ -421,6 +421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3960155875934589067}
+  - component: {fileID: 2620889190967400990}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Untagged
@@ -446,6 +447,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2620889190967400990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026517943833449376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411abfc7496ce754e87a281f4b0f1b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  rotationSpeed: 0.5
 --- !u!1 &8184344767798482660
 GameObject:
   m_ObjectHideFlags: 0
