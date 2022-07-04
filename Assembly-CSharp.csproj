@@ -75,6 +75,7 @@
     <Compile Include="Assets\scripts\Enemy\MachineGunManager.cs" />
     <Compile Include="Assets\scripts\Enemy\BulletManager.cs" />
     <Compile Include="Assets\scripts\childtrack.cs" />
+    <Compile Include="Assets\scripts\Enemy\TurretManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
