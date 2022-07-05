@@ -12,10 +12,13 @@ public class TowerManager : MonoBehaviour
     public float bulletDeathTime;
     public float amount;
     public float spawnfrequency;
+    public float rotationSpeed = 100;
+    public float defaultZ;
     int x;
     // Start is called before the first frame update
     void Start()
     {
+        defaultZ = 0;
         x = 0;
         Invoke("Spawn2", time);
     }
@@ -36,6 +39,11 @@ public class TowerManager : MonoBehaviour
             BulletManager b = go.GetComponent<BulletManager>();
             b.setSpeed(bulletspeed);
             b.time = bulletDeathTime;
+            b.rotationSpeed = rotationSpeed;
+            if (defaultZ != 0)
+            {
+                b.defaultZ = defaultZ;
+            }
             go.transform.localPosition = this.transform.position;
             Invoke("Spawn", spawnfrequency);
         }
@@ -47,21 +55,4 @@ public class TowerManager : MonoBehaviour
         Spawn();
         Invoke("Spawn2", time);
     }
-
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        playermove2 ifplayer = other.collider.GetComponent<playermove2>();
-        if (ifplayer != null)
-        {
-            //Debug.Log("1");
-            Death();
-        }
-    }
-
-    void Death() //死亡（播放动画以及死亡）
-    {
-        Destroy(gameObject);
-    }
-
 }
