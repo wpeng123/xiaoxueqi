@@ -1,68 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-public class CircleEnemyManager : MonoBehaviour
+public class MechaWormManager : MonoBehaviour
 {
-    private Vector3 targetPosition;
-    public float speed;
-    public float rotationSpeed;
-    public float acceleratedSpeed;
+    Animator ani;
+    public float aniTime;
     public float Deathtime;
-    bool death = false;
     public GameObject dead;
-
     // Start is called before the first frame update
     void Start()
     {
-        death = false;
+        ani = this.GetComponent<Animator>();
+
+        Invoke("animate",3.5f);
+        
+        //Debug.Log(ani);
     }
 
     // Update is called once per frame
     void Update()
     {
-        speed += acceleratedSpeed;
-        if (!death)
-        {
-            Move();
-        }
+        
     }
+
+    void animate()
+    {
+        animationStart();
+        Invoke("animationStop", 0.5f);
+        Invoke("animate", aniTime);
+
+    }
+
+    void animationStart()
+    {
+        ani.SetBool("Release",true);
+    }
+
+    void animationStop()
+    {
+        ani.SetBool("Release", false);
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
-        
+
         //Debug.Log("1");
         playermove2 ifplayer = other.collider.GetComponent<playermove2>();
         if (ifplayer != null)
         {
             Death1();
+            //Debug.Log("2");
+            Invoke("Death2", Deathtime);
         }
     }
 
-    private void Move()
+    void Death1()
     {
-        targetPosition = GameObject.Find("MechaBall").transform.position;
-        var direction = targetPosition - transform.position;//目标方向
-        transform.Translate(direction.normalized * speed * Time.deltaTime * 0.5f, Space.World);//向目标方向移动，normalized归一实现匀速移动
-
-        Vector3 dir = targetPosition - transform.position;
-        float angle = Vector3.SignedAngle(Vector3.up, dir, Vector3.forward);
-        transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, 0, angle), rotationSpeed);
-    }
-
-    public void Death1()
-    {
-        death = true;
+        Transform child = GetChild(this.transform, "Spawner");
+        child.GetComponent<NestManager>().Death();
+        Transform boom = GetChild(this.transform, "Boom");
+        boom.gameObject.SetActive(true);
         GameObject go = (GameObject)Instantiate(dead);
         go.transform.localScale = this.transform.localScale;
         go.transform.localPosition = this.transform.position;
-        Transform boom = GetChild(this.transform, "Boom");
-        boom.gameObject.SetActive(true);
-        //Debug.Log("2");
-        Invoke("Death2", Deathtime);
     }
 
-    public void Death2()//小兵死亡操作
+    void Death2() //死亡（播放动画以及死亡）
     {
         Destroy(gameObject);
     }

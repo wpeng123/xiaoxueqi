@@ -49,11 +49,12 @@ public class TowerManager : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D other)//接触时触发，无需调用
+    void OnCollisionEnter2D(Collision2D other)
     {
-        playermove2 ifplayer = other.GetComponent<playermove2>();
+        playermove2 ifplayer = other.collider.GetComponent<playermove2>();
         if (ifplayer != null)
         {
+            //Debug.Log("1");
             Death();
         }
     }

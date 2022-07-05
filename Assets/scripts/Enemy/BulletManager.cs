@@ -9,6 +9,7 @@ public class BulletManager : MonoBehaviour
     public float speed;
     public float time;
     public float rotationSpeed = 100f;
+    public float damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +27,9 @@ public class BulletManager : MonoBehaviour
         // StraightMove();
         Move();
     }
-    void OnTriggerStay2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        playermove2 ifplayer = other.GetComponent<playermove2>();
+        playermove2 ifplayer = other.collider.GetComponent<playermove2>();
         if (ifplayer != null)
         {
             death();

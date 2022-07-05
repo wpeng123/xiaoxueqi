@@ -53,18 +53,18 @@ public class NestManager : MonoBehaviour
         }
     }
 
-    void Death() //死亡（播放动画以及死亡）
+    public void Death() //死亡（播放动画以及死亡）
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
         ChildDeath(this.gameObject);
     }
 
-    void ChildDeath(GameObject child)
+    public void ChildDeath(GameObject child)
     {
         for (int c = 0; c < child.transform.childCount; c++)
         {
             CircleEnemyManager CircleEnemyDeath = child.transform.GetChild(c).GetComponent<CircleEnemyManager>();
-            CircleEnemyDeath.Death();
+            CircleEnemyDeath.Death1();
         }
     }
 }
