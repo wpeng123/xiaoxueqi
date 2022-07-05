@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6590729857906978417}
   - component: {fileID: 2979430323936374712}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1874159135264873159}
   - component: {fileID: 7792608821922098632}
   - component: {fileID: 5222214260973498841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpikeBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3233840713765363168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,13 +241,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3960155875934589067}
   - component: {fileID: 2620889190967400990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3960155875934589067
 Transform:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 7665768090398417536}
   - component: {fileID: 4416676994730940383}
   - component: {fileID: 2098343598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,4 +541,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e44e93dec4dfdf44977a505b840fa9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 1000
+  power: 300

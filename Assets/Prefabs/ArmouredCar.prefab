@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3047912764650235473}
   - component: {fileID: 6496090994272398346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawner (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 5481044746012894465}
   - component: {fileID: 4508143239055239336}
   - component: {fileID: 8122162254998950619}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 8356360781264255425}
   - component: {fileID: 1434419707368937413}
   - component: {fileID: 6367792066487417450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmouredCarRun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8979694664358931985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmouredCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 5480019275221140686}
   - component: {fileID: 5540711921790612853}
   - component: {fileID: 5748690526500663130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmouredCarShoot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 984764414462467695}
   - component: {fileID: 1849070331822590843}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1583135879401477889}
   - component: {fileID: 2552058218369118030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CarShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

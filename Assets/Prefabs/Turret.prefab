@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8024682339783220446}
   - component: {fileID: 4989155595336155867}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1276542330242940733}
   - component: {fileID: 7399658991065597925}
   - component: {fileID: 7354052874613060676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretWalk1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 2791169195814155355}
   - component: {fileID: 1124873898701298284}
   - component: {fileID: 8902944432025549680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TurretShoot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8407115826924784551}
   - component: {fileID: 4818906912584412791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 1141430228020861557}
   - component: {fileID: 487014252181958886}
   - component: {fileID: 4324816879008599536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,6 +434,10 @@ PrefabInstance:
     - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
       propertyPath: m_Name
       value: Boom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
       propertyPath: m_IsActive
