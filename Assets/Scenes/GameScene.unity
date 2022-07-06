@@ -174,7 +174,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73aae7c79461aa24a809df581a004c42, type: 2}
+  - {fileID: 2100000, guid: 44dd77c2c17abad49bd0393773ff914e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -53634,6 +53634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArmouredCar
       objectReference: {fileID: 0}
+    - target: {fileID: 5961876977008112651, guid: 8e3deee56cd625c459a5ef24e9ceb343, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8979694664358931985, guid: 8e3deee56cd625c459a5ef24e9ceb343, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -58479,6 +58483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MechaWorm
       objectReference: {fileID: 0}
+    - target: {fileID: 823346361459286322, guid: 20c4b6c78a9a94648a9b92531c5e239e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c4b6c78a9a94648a9b92531c5e239e, type: 3}
 --- !u!1 &401859650
@@ -58582,6 +58590,10 @@ PrefabInstance:
     - target: {fileID: 8973265535122595240, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
       propertyPath: m_Name
       value: Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973265535122595240, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8973265535122595241, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
       propertyPath: m_RootOrder
@@ -61294,6 +61306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret
       objectReference: {fileID: 0}
+    - target: {fileID: 8368116030181538377, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
 --- !u!4 &1427743334 stripped
@@ -62256,11 +62272,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3960155875934589067, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.427635
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3960155875934589067, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.325153
+      value: 2.37
       objectReference: {fileID: 0}
     - target: {fileID: 3960155875934589067, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_LocalPosition.z
