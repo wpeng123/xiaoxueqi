@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8024682339783220446}
   - component: {fileID: 4989155595336155867}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1276542330242940733}
   - component: {fileID: 7399658991065597925}
   - component: {fileID: 7354052874613060676}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TurretWalk1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 2791169195814155355}
   - component: {fileID: 1124873898701298284}
   - component: {fileID: 8902944432025549680}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TurretShoot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8407115826924784551}
   - component: {fileID: 4818906912584412791}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,13 +346,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 673e8e4902308a544848f524a5fa2ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3
-  bullet: {fileID: 8527319921274660702, guid: 9eefa96014c8c9749829bc4eec9790e9, type: 3}
-  bulletspeed: 5
-  bulletscale: 0.3
+  time: 0
+  bullet: {fileID: 2463709377644932792, guid: d058d3d6b94f9fe46896578a2fa6f7da, type: 3}
+  bulletspeed: 8
+  bulletscale: 1
   bulletDeathTime: 5
   amount: 1
   spawnfrequency: 0.1
+  rotationSpeed: 100
+  defaultZ: 0
 --- !u!1 &8368116030181538377
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +366,7 @@ GameObject:
   - component: {fileID: 1141430228020861557}
   - component: {fileID: 487014252181958886}
   - component: {fileID: 4324816879008599536}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
