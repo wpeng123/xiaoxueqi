@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6590729857906978417}
   - component: {fileID: 2979430323936374712}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1874159135264873159}
   - component: {fileID: 7792608821922098632}
   - component: {fileID: 5222214260973498841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpikeBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: db53b0788944e8b4898f946eb5438fc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -210,7 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3233840713765363168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,13 +241,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3960155875934589067}
   - component: {fileID: 2620889190967400990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3960155875934589067
 Transform:
   m_ObjectHideFlags: 0
@@ -290,7 +290,8 @@ GameObject:
   - component: {fileID: 2577947284617342540}
   - component: {fileID: 7665768090398417536}
   - component: {fileID: 4416676994730940383}
-  m_Layer: 0
+  - component: {fileID: 2098343598}
+  m_Layer: 8
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +375,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 7305141991180726566}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 78f9fa2c77b80dc4f95b12430405ec77, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -523,8 +524,21 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 78f9fa2c77b80dc4f95b12430405ec77, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2098343598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7305141991180726566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e44e93dec4dfdf44977a505b840fa9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 300
