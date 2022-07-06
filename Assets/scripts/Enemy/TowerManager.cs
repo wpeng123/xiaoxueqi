@@ -63,6 +63,7 @@ public class TowerManager : MonoBehaviour
     {
         x = 0;
         Spawn();
+        //Debug.Log(this.tag + "spawn3");
     }
 
 }
