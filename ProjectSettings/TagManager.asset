@@ -7,6 +7,7 @@ TagManager:
   - enemy
   - enemy_shooter
   - Bullet
+  - enemy_spider
   layers:
   - Default
   - TransparentFX
