@@ -21,7 +21,6 @@ public class WheelsManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         float a = power;
         GameObject obj = this.transform.parent.gameObject;
         playermove2 b = collision.gameObject.GetComponent<playermove2>();
@@ -31,5 +30,4 @@ public class WheelsManager : MonoBehaviour
             obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(obj.transform.position.x - collision.gameObject.transform.position.x, obj.transform.position.y - collision.gameObject.transform.position.y) * a);//a是力的大小
         }
     }
-
 }
