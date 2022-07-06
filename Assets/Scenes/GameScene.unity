@@ -56489,6 +56489,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4818906912584412791, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2463709377644932792, guid: d058d3d6b94f9fe46896578a2fa6f7da, type: 3}
     - target: {fileID: 8368116030181538377, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
       propertyPath: m_Name
       value: Turret
@@ -57459,11 +57463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3960155875934589067, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.427635
+      value: 17.77
       objectReference: {fileID: 0}
     - target: {fileID: 3960155875934589067, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.325153
+      value: 7.3
       objectReference: {fileID: 0}
     - target: {fileID: 3960155875934589067, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -63398,6 +63402,38 @@ PrefabInstance:
     - target: {fileID: 1842794660, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 690345698480810956, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
+      propertyPath: ShellScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 690345698480810956, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
+      propertyPath: bulletscale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 690345698480810956, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
+      propertyPath: bulletspeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 690345698480810956, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
+      propertyPath: bulletAmount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 690345698480810956, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
+      propertyPath: bulletFrequency
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 690345698480810956, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
+      propertyPath: MachineGunShootTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817506262551291121, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370166236825626459, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8973265535122595240, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
       propertyPath: m_Name
