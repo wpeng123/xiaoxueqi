@@ -51,9 +51,12 @@ public class TowerManager : MonoBehaviour
 
     public void Spawn2() //生成子弹
     {
-        x = 0;
-        Spawn();
-        Invoke("Spawn2", time);
+        if (time != 0)
+        {
+            x = 0;
+            Spawn();
+            Invoke("Spawn2", time);
+        }
     }
 
     public void Spawn3() //生成子弹
