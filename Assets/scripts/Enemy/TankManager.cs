@@ -22,6 +22,10 @@ public class TankManager : MonoBehaviour
     public float MoveTime;
     public float MoveSpeed;
 
+    public int DestoryedWeekness;
+
+    public GameObject dead;
+
     Transform WarningObject;
     Transform TankTrackVertical1;
     Transform TankTrackHorizontal1;
@@ -36,6 +40,7 @@ public class TankManager : MonoBehaviour
     float MoveX;
     float MoveY;
     bool IfWarning = false;
+    bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -102,6 +107,11 @@ public class TankManager : MonoBehaviour
 
         Move();
 
+        if(DestoryedWeekness == 3) 
+        {
+            Death1();
+        }
+
     }
 
     public static Transform GetChild(Transform parentTF, string childName)
@@ -158,10 +168,13 @@ public class TankManager : MonoBehaviour
 
     void Move()
     {
+        if (!isDead)
+        {
             Vector2 position = transform.position;
             position.x = transform.position.x + MoveX * MoveSpeed * Time.deltaTime;
             position.y = transform.position.y + MoveY * MoveSpeed * Time.deltaTime;
             transform.position = position;
+        }
     }
 
     void GetDirection()
@@ -244,4 +257,22 @@ public class TankManager : MonoBehaviour
         ShellShoot.SetBool("Shoot", false);
         Invoke("AniShellShootStart", ShellShootTime - 3.0f);
     }
+
+    public void Death1()
+    {
+        isDead = true;
+        GameObject go = (GameObject)Instantiate(dead);
+        go.transform.localScale = this.transform.localScale;
+        go.transform.localPosition = this.transform.position;
+        Transform boom = GetChild(this.transform, "Boom");
+        boom.gameObject.SetActive(true);
+        //Debug.Log("2");
+        Invoke("Death2", 0.4f);
+    }
+
+    public void Death2()
+    {
+        Destroy(gameObject);
+    }
+
 }

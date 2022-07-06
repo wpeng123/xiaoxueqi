@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Tools;
 
-public class TurretManager : MonoBehaviour
+public class CarManager : MonoBehaviour
 {
-    public float Deathtime;
     public GameObject dead;
     bool isDead;
     // Start is called before the first frame update
@@ -18,8 +18,10 @@ public class TurretManager : MonoBehaviour
     {
         
     }
+
     void OnCollisionEnter2D(Collision2D other)
     {
+
         if (!isDead)
         {
             
@@ -27,8 +29,8 @@ public class TurretManager : MonoBehaviour
             playermove2 ifplayer = other.collider.GetComponent<playermove2>();
             if (ifplayer != null)
             {
-                //transform.GetComponent<Ai_Move_main>().enabled = false;
-                //Destroy(transform.GetComponent<Rigidbody2D>());
+                transform.GetComponent<Ai_Move_main>().enabled = false;
+                Destroy(transform.GetComponent<Rigidbody2D>());
                 isDead = true;
                 Death1();
             }
@@ -37,7 +39,6 @@ public class TurretManager : MonoBehaviour
 
     public void Death1()
     {
-
         GameObject go = (GameObject)Instantiate(dead);
         go.transform.localScale = this.transform.localScale;
         go.transform.localPosition = this.transform.position;
@@ -45,34 +46,12 @@ public class TurretManager : MonoBehaviour
         Transform boom = GetChild(this.transform, "Boom");
         boom.gameObject.SetActive(true);
         //Debug.Log("2");
-        Invoke("Death2", Deathtime);
+        Invoke("Death2", 0.4f);
     }
 
     public void Death2()
     {
         Destroy(gameObject);
-    }
-
-    public static Transform GetChild(Transform parentTF, string childName)
-    {
-        //在子物体中查找
-        Transform childTF = parentTF.Find(childName);
-
-        if (childTF != null)
-        {
-            return childTF;
-        }
-        //将问题交由子物体
-        int count = parentTF.childCount;
-        for (int i = 0; i < count; i++)
-        {
-            childTF = GetChild(parentTF.GetChild(i), childName);
-            if (childTF != null)
-            {
-                return childTF;
-            }
-        }
-        return null;
     }
 
 }
