@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8024682339783220446}
   - component: {fileID: 4989155595336155867}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1276542330242940733}
   - component: {fileID: 7399658991065597925}
   - component: {fileID: 7354052874613060676}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TurretWalk1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 2791169195814155355}
   - component: {fileID: 1124873898701298284}
   - component: {fileID: 8902944432025549680}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TurretShoot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8407115826924784551}
   - component: {fileID: 4818906912584412791}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,10 +376,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 673e8e4902308a544848f524a5fa2ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3
-  bullet: {fileID: 8527319921274660702, guid: 9eefa96014c8c9749829bc4eec9790e9, type: 3}
-  bulletspeed: 5
-  bulletscale: 0.3
+  time: 0
+  bullet: {fileID: 2463709377644932792, guid: d058d3d6b94f9fe46896578a2fa6f7da, type: 3}
+  bulletspeed: 8
+  bulletscale: 1
   bulletDeathTime: 5
   amount: 1
   spawnfrequency: 0.1
@@ -396,9 +396,12 @@ GameObject:
   - component: {fileID: 1141430228020861557}
   - component: {fileID: 487014252181958886}
   - component: {fileID: 4324816879008599536}
-  m_Layer: 8
+  - component: {fileID: 488447450}
+  - component: {fileID: 488447448}
+  - component: {fileID: 488447449}
+  m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: enemy_spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,6 +456,64 @@ CircleCollider2D:
   m_Offset: {x: -0.011612833, y: 0.10452211}
   serializedVersion: 2
   m_Radius: 0.329668
+--- !u!50 &488447450
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368116030181538377}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 30
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &488447448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368116030181538377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69b80b49eaa2d448a2e623bb4f99f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 488447450}
+  target: {fileID: 0}
+  counter: 0
+  nearest_attack_distance: 0
+  farthest_attack_distance: 0
+  bulletspeed: 20
+  bulletscale: 1
+  bulletDeathTime: 10
+  bulletAmount: 1
+  bulletFrequency: 10
+  attack_interval_time: 3
+--- !u!114 &488447449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368116030181538377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411abfc7496ce754e87a281f4b0f1b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  rotationSpeed: 0
 --- !u!1001 &5888314603256628879
 PrefabInstance:
   m_ObjectHideFlags: 0

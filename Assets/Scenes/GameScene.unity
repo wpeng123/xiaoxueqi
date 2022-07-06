@@ -57345,10 +57345,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MechaWorm
       objectReference: {fileID: 0}
-    - target: {fileID: 823346361459286322, guid: 20c4b6c78a9a94648a9b92531c5e239e, type: 3}
-      propertyPath: m_TagString
-      value: enemy_shooter
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c4b6c78a9a94648a9b92531c5e239e, type: 3}
 --- !u!1 &401859650
@@ -59631,14 +59627,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1277518642, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
-      propertyPath: maxpower
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674248444, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 946307657693131723, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
       propertyPath: m_Name
       value: MechaBall
@@ -60120,6 +60108,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 488447448, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1961108416}
     - target: {fileID: 1141430228020861557, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -60164,53 +60156,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1725753881354725175, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3726303149879763933, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4818906912584412791, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4818906912584412791, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 2463709377644932792, guid: d058d3d6b94f9fe46896578a2fa6f7da, type: 3}
-    - target: {fileID: 4818906912584412791, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: bulletscale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4818906912584412791, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: bulletspeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4989155595336155867, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6188943058763307180, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7009440585898780637, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8024682339783220446, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8368116030181538377, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
       propertyPath: m_Name
       value: Turret
-      objectReference: {fileID: 0}
-    - target: {fileID: 8368116030181538377, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
@@ -61215,10 +61163,6 @@ PrefabInstance:
     - target: {fileID: 6026517943833449376, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_Name
       value: Spike
-      objectReference: {fileID: 0}
-    - target: {fileID: 6026517943833449376, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}

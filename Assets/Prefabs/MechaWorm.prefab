@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 2024961082833080004}
   m_Layer: 8
   m_Name: MechaWorm
-  m_TagString: Untagged
+  m_TagString: enemy_shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
