@@ -28,7 +28,7 @@ public class WheelsManager : MonoBehaviour
         if (b != null)
         {
             //Debug.Log("has collision");
-            obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(obj.transform.position.x - this.transform.position.x, obj.transform.position.y - this.transform.position.y) * a);//a是力的大小
+            obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(obj.transform.position.x - collision.gameObject.transform.position.x, obj.transform.position.y - collision.gameObject.transform.position.y) * a);//a是力的大小
         }
     }
 
