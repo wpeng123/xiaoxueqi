@@ -64,6 +64,7 @@
     <Compile Include="Assets\scripts\playermove.cs" />
     <Compile Include="Assets\scripts\Enemy\TurretManager.cs" />
     <Compile Include="Assets\scripts\moving_ani.cs" />
+    <Compile Include="Assets\scripts\gamemanager.cs" />
     <Compile Include="Assets\scripts\Enemy\CircleEnemyManager.cs" />
     <Compile Include="Assets\scripts\Enemy\TankManager.cs" />
     <Compile Include="Assets\scripts\childrotate.cs" />
@@ -74,7 +75,9 @@
     <Compile Include="Assets\scripts\Enemy\BulletManager.cs" />
     <Compile Include="Assets\scripts\childtrack.cs" />
     <Compile Include="Assets\scripts\Enemy\MechaWormManager.cs" />
-    <Compile Include="Assets\scripts\gamemanager.cs" />
+    <Compile Include="Assets\scripts\Enemy\TankWeeknessManager.cs" />
+    <Compile Include="Assets\scripts\Enemy\CarManager.cs" />
+    <Compile Include="Assets\scripts\Enemy\WheelsManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

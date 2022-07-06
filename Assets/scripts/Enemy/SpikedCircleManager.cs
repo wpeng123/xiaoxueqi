@@ -20,15 +20,6 @@ public class SpikedCircleManager : MonoBehaviour
         Move();
     }
 
-    void OnTriggerStay2D(Collider2D other)
-    {
-        playermove2 ifplayer = other.GetComponent<playermove2>();
-        if (ifplayer != null)
-        {
-            
-        }
-    }
-
     private void Move()
     {
         targetPosition = GameObject.Find("MechaBall").transform.position;
