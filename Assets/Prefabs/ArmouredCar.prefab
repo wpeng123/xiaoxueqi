@@ -150,6 +150,36 @@ CapsuleCollider2D:
   m_Offset: {x: -1.1347259, y: -0.6329541}
   m_Size: {x: 0.329463, y: 0.8345146}
   m_Direction: 0
+--- !u!1 &3144639177456541966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7322588383282534505}
+  m_Layer: 0
+  m_Name: direction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7322588383282534505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3144639177456541966}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.02, y: 2.52, z: -9.313019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8979694664358931985}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3504154524635528778
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +344,7 @@ Transform:
   - {fileID: 3047912764650235473}
   - {fileID: 3014700489057088474}
   - {fileID: 1583135879401477889}
+  - {fileID: 7322588383282534505}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -353,6 +384,11 @@ MonoBehaviour:
   enemy: {fileID: 2099644982}
   target: {fileID: 0}
   counter: 0
+  bulletspeed: 15
+  bulletscale: 1
+  bulletDeathTime: 10
+  bulletAmount: 3
+  bulletFrequency: 0.1
   attack_interval_time: 0
 --- !u!1 &6301048955513344138
 GameObject:

@@ -55,4 +55,11 @@ public class TowerManager : MonoBehaviour
         Spawn();
         Invoke("Spawn2", time);
     }
+
+    public void Spawn3() //Éú³É×Óµ¯
+    {
+        x = 0;
+        Spawn();
+    }
+
 }

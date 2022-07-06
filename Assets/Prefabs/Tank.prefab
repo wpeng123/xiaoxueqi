@@ -282,7 +282,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: dae59a9823d55eb4281fcbad3b6634c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -566,7 +566,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 64e05c1d07e1c3c4da324bb3e29a9579, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1638,17 +1638,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShellShootTime: 10
-  ShellScale: 0.5
+  ShellScale: 2
   ShellSpeed: 20
   ShellDeathTime: 10
   WarningTime: 1
   WarningFrequency: 0.1
-  MachineGunShootTime: 5
-  bulletspeed: 15
-  bulletscale: 0.2
+  MachineGunShootTime: 6
+  bulletspeed: 30
+  bulletscale: 1.2
   bulletDeathTime: 10
-  bulletAmount: 5
-  bulletFrequency: 0.1
+  bulletAmount: 100
+  bulletFrequency: 0.06
   MoveTime: 4
   MoveSpeed: 1
 --- !u!212 &1842794660

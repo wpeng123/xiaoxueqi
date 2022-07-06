@@ -42,6 +42,12 @@ public class Ai_Move_main : MonoBehaviour
     public Rigidbody2D target;
     public int counter;//用于记录球体运动情况 被卡住time
 
+    public float bulletspeed;
+    public float bulletscale;
+    public float bulletDeathTime;
+    public float bulletAmount;
+    public float bulletFrequency;
+
     public int attack_interval_time;
 
     private int is_attack;//是否攻击
@@ -78,7 +84,25 @@ public class Ai_Move_main : MonoBehaviour
         weight.stage_40 = 0.10f;
 
 
+
         enemy_stru.situation = Situation.chase;//当前的情况
+
+        TowerManager machineGunManager = attack1.GetComponent<TowerManager>();
+        machineGunManager.amount = bulletAmount;
+        machineGunManager.bulletDeathTime = bulletDeathTime;
+        machineGunManager.spawnfrequency = bulletFrequency;
+        machineGunManager.bulletscale = bulletscale;
+        machineGunManager.bulletspeed = bulletspeed;
+        machineGunManager.rotationSpeed = 0;
+
+        TowerManager machineGunManager2 = attack2.GetComponent<TowerManager>();
+        machineGunManager2.amount = bulletAmount;
+        machineGunManager2.bulletDeathTime = bulletDeathTime;
+        machineGunManager2.spawnfrequency = bulletFrequency;
+        machineGunManager2.bulletscale = bulletscale;
+        machineGunManager2.bulletspeed = bulletspeed;
+        machineGunManager2.rotationSpeed = 0;
+
 
     }
     void attack()
@@ -91,12 +115,8 @@ public class Ai_Move_main : MonoBehaviour
             enemy.velocity = Vector2.zero;
             TowerManager attack3 = attack1.GetComponent<TowerManager>();
             TowerManager attack4 = attack2.GetComponent<TowerManager>();
-            attack3.amount = 5;
-            attack3.spawnfrequency = 0.2f;
-            attack3.Spawn2();
-            attack4.amount = 5;
-            attack4.spawnfrequency = 0.2f;
-            attack4.Spawn2();
+            attack3.Spawn3();
+            attack4.Spawn3();
             is_attack = -1;
         }
         else if(is_attack==-1)
@@ -264,8 +284,8 @@ public class Ai_Move_main : MonoBehaviour
         enemy_stru.position_y = enemy.transform.position.y;
         enemy_stru.position_z = enemy.transform.position.z;
 
-        if(enemy.tag=="enemy_shooter")
-        LookAt2D(target.position);
+        //if(enemy.tag=="enemy_shooter")
+        //LookAt2D(target.position);
 
         enemy_stru.distance = get_distance();
         //if(need_get_situation())
@@ -322,7 +342,11 @@ public class Ai_Move_main : MonoBehaviour
 
         }
 
-     
+        TowerManager EmitterManager1 = attack1.GetComponent<TowerManager>();
+        TowerManager EmitterManager2 = attack2.GetComponent<TowerManager>();
+        EmitterManager1.defaultZ = transform.eulerAngles.z;
+        EmitterManager2.defaultZ = transform.eulerAngles.z;
+
     }
     public static Transform GetChild(Transform parentTF, string childName)
     {
@@ -345,10 +369,10 @@ public class Ai_Move_main : MonoBehaviour
         }
         return null;
     }
-    void LookAt2D(Vector2 dir)
-    {
-        Debug.Log("look at");
-        float angle = Mathf.Atan2(-dir.x, dir.y) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-    }
+    //void LookAt2D(Vector2 dir)
+    //{
+    //    Debug.Log("look at");
+    //    float angle = Mathf.Atan2(-dir.x, dir.y) * Mathf.Rad2Deg;
+    //    transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    //}
 }
