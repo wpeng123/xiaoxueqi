@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3047912764650235473}
   - component: {fileID: 6496090994272398346}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BulletSpawner (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,10 +46,12 @@ MonoBehaviour:
   time: 3
   bullet: {fileID: 8527319921274660702, guid: 9eefa96014c8c9749829bc4eec9790e9, type: 3}
   bulletspeed: 8
-  bulletscale: 0.2
+  bulletscale: 1
   bulletDeathTime: 5
   amount: 3
   spawnfrequency: 0.3
+  rotationSpeed: 100
+  defaultZ: 0
 --- !u!1 &1834142447232439936
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,7 +65,7 @@ GameObject:
   - component: {fileID: 5481044746012894465}
   - component: {fileID: 4508143239055239336}
   - component: {fileID: 8122162254998950619}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +162,7 @@ GameObject:
   - component: {fileID: 8356360781264255425}
   - component: {fileID: 1434419707368937413}
   - component: {fileID: 6367792066487417450}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmouredCarRun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,9 +288,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8979694664358931985}
-  m_Layer: 8
+  - component: {fileID: 2099644982}
+  - component: {fileID: 2099644983}
+  m_Layer: 0
   m_Name: ArmouredCar
-  m_TagString: Untagged
+  m_TagString: enemy_shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,6 +317,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &2099644982
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5961876977008112651}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 50
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &2099644983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5961876977008112651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69b80b49eaa2d448a2e623bb4f99f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 2099644982}
+  target: {fileID: 0}
+  counter: 0
+  attack_interval_time: 0
 --- !u!1 &6301048955513344138
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +365,7 @@ GameObject:
   - component: {fileID: 5480019275221140686}
   - component: {fileID: 5540711921790612853}
   - component: {fileID: 5748690526500663130}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ArmouredCarShoot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 984764414462467695}
   - component: {fileID: 1849070331822590843}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,10 +502,12 @@ MonoBehaviour:
   time: 3
   bullet: {fileID: 8527319921274660702, guid: 9eefa96014c8c9749829bc4eec9790e9, type: 3}
   bulletspeed: 8
-  bulletscale: 0.2
+  bulletscale: 1
   bulletDeathTime: 5
   amount: 3
   spawnfrequency: 0.3
+  rotationSpeed: 100
+  defaultZ: 0
 --- !u!1 &9179128652563683430
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1583135879401477889}
   - component: {fileID: 2552058218369118030}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CarShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
