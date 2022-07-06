@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &370815414870949367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382795297434599083}
+  m_Layer: 0
+  m_Name: direction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1382795297434599083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370815414870949367}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.04, y: 1.27, z: -4.056033}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1141430228020861557}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1725753881354725175
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,9 +396,12 @@ GameObject:
   - component: {fileID: 1141430228020861557}
   - component: {fileID: 487014252181958886}
   - component: {fileID: 4324816879008599536}
+  - component: {fileID: 488447450}
+  - component: {fileID: 488447448}
+  - component: {fileID: 488447449}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: enemy_spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,6 +422,7 @@ Transform:
   - {fileID: 8407115826924784551}
   - {fileID: 8024682339783220446}
   - {fileID: 1002321765008079972}
+  - {fileID: 1382795297434599083}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -422,6 +456,64 @@ CircleCollider2D:
   m_Offset: {x: -0.011612833, y: 0.10452211}
   serializedVersion: 2
   m_Radius: 0.329668
+--- !u!50 &488447450
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368116030181538377}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 30
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &488447448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368116030181538377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69b80b49eaa2d448a2e623bb4f99f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 488447450}
+  target: {fileID: 0}
+  counter: 0
+  nearest_attack_distance: 0
+  farthest_attack_distance: 0
+  bulletspeed: 20
+  bulletscale: 1
+  bulletDeathTime: 10
+  bulletAmount: 1
+  bulletFrequency: 10
+  attack_interval_time: 3
+--- !u!114 &488447449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368116030181538377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411abfc7496ce754e87a281f4b0f1b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  rotationSpeed: 1
 --- !u!1001 &5888314603256628879
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -218,7 +218,16 @@ OnGameStateChanged?.Invoke(newState);
                     break;
                 }
             }
-            await Task.Delay((int)(wave_max_interval * 1000));
+            for(int i=0;i< wave_max_interval;i++)
+            {
+                //检测敌人是否被消灭完
+                /*if(over)
+                {
+                    break;
+                }*/
+                await Task.Delay((int)(1000));
+            }
+           
         }
         return;
     }

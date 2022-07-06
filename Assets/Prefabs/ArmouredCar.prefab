@@ -397,6 +397,8 @@ MonoBehaviour:
   enemy: {fileID: 2099644982}
   target: {fileID: 0}
   counter: 0
+  nearest_attack_distance: 0
+  farthest_attack_distance: 0
   bulletspeed: 15
   bulletscale: 1
   bulletDeathTime: 10

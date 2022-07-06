@@ -27,8 +27,9 @@ public class TurretManager : MonoBehaviour
             playermove2 ifplayer = other.collider.GetComponent<playermove2>();
             if (ifplayer != null)
             {
-                //transform.GetComponent<Ai_Move_main>().enabled = false;
-                //Destroy(transform.GetComponent<Rigidbody2D>());
+                transform.GetComponent<Ai_Move_main>().enabled = false;
+                transform.GetComponent<SpikedCircleManager>().enabled = false;
+                Destroy(transform.GetComponent<Rigidbody2D>());
                 isDead = true;
                 Death1();
             }
