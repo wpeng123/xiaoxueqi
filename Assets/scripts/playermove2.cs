@@ -7,6 +7,7 @@ public class playermove2 : MonoBehaviour
     public float minenergy;
     public float dump;
     public float maxpower;
+    public static float health;
     float speed;
     float maxspeed;
     float energy;
@@ -23,6 +24,10 @@ public class playermove2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(health<=0)
+        {
+            gamemanager.instance.UpdateGameState(gamemanager.Gamestate.Defeat);
+        }
         speed = Mathf.Sqrt(Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.x, 2) + Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.y, 2));
         //LookAt2D(this.GetComponent<Rigidbody2D>().velocity);
         Tractive_force();
