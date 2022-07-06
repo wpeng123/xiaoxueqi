@@ -491,9 +491,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 488447450}
   target: {fileID: 0}
-  counter: 0
-  nearest_attack_distance: 0
-  farthest_attack_distance: 0
+  counter: 1
+  nearest_attack_distance: 5
+  farthest_attack_distance: 40
   bulletspeed: 20
   bulletscale: 1
   bulletDeathTime: 10

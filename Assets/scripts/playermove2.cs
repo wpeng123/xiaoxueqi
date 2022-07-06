@@ -26,7 +26,7 @@ public class playermove2 : MonoBehaviour
     {
         if(health<=0)
         {
-            gamemanager.instance.UpdateGameState(gamemanager.Gamestate.Defeat);
+            //gamemanager.instance.UpdateGameState(gamemanager.Gamestate.Defeat);
         }
         speed = Mathf.Sqrt(Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.x, 2) + Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.y, 2));
         //LookAt2D(this.GetComponent<Rigidbody2D>().velocity);
