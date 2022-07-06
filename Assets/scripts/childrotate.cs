@@ -24,12 +24,12 @@ public class childrotate : MonoBehaviour
         
         if (transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) <= 180 && transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) > 0|| transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) <= 180 && transform.rotation.eulerAngles.z - angle_to_eulerangle(angle)<=-180)
         {
-            Debug.Log(1);
+            //Debug.Log(1);
             target = transform.rotation.eulerAngles.z - angle_to_eulerangle(angle)>speed?(transform.rotation.eulerAngles.z - speed+360)%360: angle_to_eulerangle(angle);
         }
         else if (transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) > 180 || transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) < 0&& transform.rotation.eulerAngles.z - angle_to_eulerangle(angle)>-180)
         {
-            Debug.Log(2);
+            //Debug.Log(2);
             target = ((transform.rotation.eulerAngles.z - angle_to_eulerangle(angle) < (-speed)|| transform.rotation.eulerAngles.z - angle_to_eulerangle(angle)>360-speed) ? transform.rotation.eulerAngles.z + speed : angle_to_eulerangle(angle))% 360 ;
         }
         else { target = transform.rotation.eulerAngles.z; }

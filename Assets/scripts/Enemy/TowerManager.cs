@@ -26,7 +26,7 @@ public class TowerManager : MonoBehaviour
 
     }
 
-    void Spawn() //生成子弹
+   public void Spawn() //生成子弹
     {
         if (x < amount)
         {
@@ -41,26 +41,15 @@ public class TowerManager : MonoBehaviour
         }
     }
 
-    void Spawn2() //生成子弹
+   public  void Spawn2() //生成子弹
     {
         x = 0;
         Spawn();
-        Invoke("Spawn2", time);
+        //Invoke("Spawn2", time);
     }
 
 
-    void OnTriggerEnter2D(Collider2D other)//接触时触发，无需调用
-    {
-        playermove2 ifplayer = other.GetComponent<playermove2>();
-        if (ifplayer != null)
-        {
-            Death();
-        }
-    }
 
-    void Death() //死亡（播放动画以及死亡）
-    {
-        Destroy(gameObject);
-    }
 
+   
 }

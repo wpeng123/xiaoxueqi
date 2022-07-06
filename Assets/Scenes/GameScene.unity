@@ -56690,6 +56690,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5961876977008112651, guid: 8e3deee56cd625c459a5ef24e9ceb343, type: 3}
+      propertyPath: m_TagString
+      value: enemy_shooter
+      objectReference: {fileID: 0}
     - target: {fileID: 6301048955513344138, guid: 8e3deee56cd625c459a5ef24e9ceb343, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -57121,7 +57125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8465551771535541770, guid: b5c806e0d1f62ed40965d1f349ff764e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.0424578
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 8465551771535541770, guid: b5c806e0d1f62ed40965d1f349ff764e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57376,6 +57380,10 @@ PrefabInstance:
     - target: {fileID: 823346361459286322, guid: 20c4b6c78a9a94648a9b92531c5e239e, type: 3}
       propertyPath: m_Name
       value: MechaWorm
+      objectReference: {fileID: 0}
+    - target: {fileID: 823346361459286322, guid: 20c4b6c78a9a94648a9b92531c5e239e, type: 3}
+      propertyPath: m_TagString
+      value: enemy_shooter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c4b6c78a9a94648a9b92531c5e239e, type: 3}
@@ -61171,6 +61179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike
       objectReference: {fileID: 0}
+    - target: {fileID: 6026517943833449376, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
 --- !u!4 &1878124923 stripped
@@ -61485,6 +61497,11 @@ Transform:
   m_Father: {fileID: 793570473}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1961108416 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1277518641, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
+  m_PrefabInstance: {fileID: 1258720943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1961527561
 GameObject:
   m_ObjectHideFlags: 0
@@ -61996,6 +62013,50 @@ Transform:
   m_Father: {fileID: 2044204471}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2099644981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5961876977008112651, guid: 8e3deee56cd625c459a5ef24e9ceb343, type: 3}
+  m_PrefabInstance: {fileID: 148660044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &2099644982
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099644981}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 50
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &2099644983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099644981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69b80b49eaa2d448a2e623bb4f99f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 2099644982}
+  target: {fileID: 1961108416}
+  counter: 0
+  is_attack: 0
+  attack1: {fileID: 0}
+  attack2: {fileID: 0}
 --- !u!1 &2103851596
 GameObject:
   m_ObjectHideFlags: 0
