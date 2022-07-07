@@ -3,33 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - enemy
-<<<<<<< Updated upstream
-  - enemy_shooter
-  - Bullet
-  - enemy_spider
-=======
-  - Assemblygroove
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Camera
+  - 
   - Water
   - UI
-  - Player
-  - Doll
-<<<<<<< Updated upstream
-  - Enemy
-  - Map
-  - Bullet
-=======
   - 
-  - beibao
-  - zhuangbei
->>>>>>> Stashed changes
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
