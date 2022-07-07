@@ -20,20 +20,12 @@ public class SpikedCircleManager : MonoBehaviour
         Move();
     }
 
-    void OnTriggerStay2D(Collider2D other)
-    {
-        playermove2 ifplayer = other.GetComponent<playermove2>();
-        if (ifplayer != null)
-        {
-            
-        }
-    }
-
     private void Move()
     {
         targetPosition = GameObject.Find("MechaBall").transform.position;
         var direction = targetPosition - transform.position;//目标方向
-        transform.Translate(direction.normalized * speed * Time.deltaTime * 0.5f, Space.World);//向目标方向移动，normalized归一实现匀速移动
+        
+        //transform.Translate(direction.normalized * speed * Time.deltaTime * 0.5f, Space.World);//向目标方向移动，normalized归一实现匀速移动
 
         Transform child = GetChild(this.transform, "direction");
         var directionself = child.position - transform.position;//自身朝向
@@ -53,12 +45,11 @@ public class SpikedCircleManager : MonoBehaviour
             z1 = V1.z;
             this.transform.eulerAngles = new Vector3(0, 0, this.transform.eulerAngles.z - rotationSpeed);
         }
+
+        transform.position += transform.up * speed * Time.deltaTime;
+
     }
 
-    public void Death()//死亡操作
-    {
-        Destroy(gameObject);
-    }
 
     public static Transform GetChild(Transform parentTF, string childName)
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpikedManager : MonoBehaviour
 {
+    public float power;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +17,18 @@ public class SpikedManager : MonoBehaviour
 
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        playermove2 ifplayer = other.GetComponent<playermove2>();
-        if (ifplayer != null)
+        
+        float a = power;
+        GameObject obj = collision.gameObject;
+        playermove2 b = obj.GetComponent<playermove2>();
+        if (b != null)
         {
-            Debug.Log("1");
+            //Debug.Log("1");
+            GameObject.Find("ShakeCameraManager").GetComponent<Tools>().ShakeScreen(0.2f, 0.01f);
+            //Debug.Log("has collision");
+            obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(obj.transform.position.x - this.transform.position.x, obj.transform.position.y - this.transform.position.y) * a);//a是力的大小
         }
     }
 

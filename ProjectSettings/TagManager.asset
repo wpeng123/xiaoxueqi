@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
+  - enemy_shooter
+  - Bullet
+  - enemy_spider
   layers:
   - Default
   - TransparentFX
@@ -14,9 +17,9 @@ TagManager:
   - UI
   - Player
   - Doll
-  - 
-  - 
-  - 
+  - Enemy
+  - Map
+  - Bullet
   - 
   - 
   - 

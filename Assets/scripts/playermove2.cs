@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using static Tools;
 public class playermove2 : MonoBehaviour
 {
     public float minenergy;
     public float dump;
     public float maxpower;
+    public static float health;
     float speed;
     float maxspeed;
     float energy;
@@ -23,6 +24,10 @@ public class playermove2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(health<=0)
+        {
+            //gamemanager.instance.UpdateGameState(gamemanager.Gamestate.Defeat);
+        }
         speed = Mathf.Sqrt(Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.x, 2) + Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.y, 2));
         //LookAt2D(this.GetComponent<Rigidbody2D>().velocity);
         Tractive_force();
@@ -45,6 +50,20 @@ public class playermove2 : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collisioninfo)
     {
+        int i = Random.Range(0, 2);
+        switch (i)
+        {
+            case 0:
+                GetChild(this.transform, "×²»÷Éù1").gameObject.SetActive(false);
+                GetChild(this.transform, "×²»÷Éù1").gameObject.SetActive(true);
+                GetChild(this.transform, "×²»÷Éù2").gameObject.SetActive(false);
+                break;
+            case 1:
+                GetChild(this.transform, "×²»÷Éù2").gameObject.SetActive(false);
+                GetChild(this.transform, "×²»÷Éù2").gameObject.SetActive(true);
+                GetChild(this.transform, "×²»÷Éù1").gameObject.SetActive(false);
+                break;
+        }
         //if (speed > 8.0)
         //{
         //    if (collisioninfo.gameObject.tag == "enemy")

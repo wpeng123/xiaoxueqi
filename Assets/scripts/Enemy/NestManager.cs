@@ -11,6 +11,7 @@ public class NestManager : MonoBehaviour
     public float speed;
     public float rotationSpeed;
     public float amount;//生成数量
+    public float acceleratedSpeed;
 
 
     void Start()
@@ -28,6 +29,7 @@ public class NestManager : MonoBehaviour
     {
         GameObject go = (GameObject)Instantiate(CircleEnemy);
         go.GetComponent<CircleEnemyManager>().speed = speed;
+        go.GetComponent<CircleEnemyManager>().acceleratedSpeed = acceleratedSpeed;
         go.GetComponent<CircleEnemyManager>().rotationSpeed = rotationSpeed;
         go.transform.parent = this.transform;
         go.transform.localPosition = Vector3.zero;
@@ -51,18 +53,18 @@ public class NestManager : MonoBehaviour
         }
     }
 
-    void Death() //死亡（播放动画以及死亡）
+    public void Death() //死亡（播放动画以及死亡）
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
         ChildDeath(this.gameObject);
     }
 
-    void ChildDeath(GameObject child)
+    public void ChildDeath(GameObject child)
     {
         for (int c = 0; c < child.transform.childCount; c++)
         {
             CircleEnemyManager CircleEnemyDeath = child.transform.GetChild(c).GetComponent<CircleEnemyManager>();
-            CircleEnemyDeath.Death();
+            CircleEnemyDeath.Death1();
         }
     }
 }
