@@ -46,10 +46,6 @@ public class SpikedCircleManager : MonoBehaviour
         }
     }
 
-    public void Death()//ËÀÍö²Ù×÷
-    {
-        Destroy(gameObject);
-    }
 
     public static Transform GetChild(Transform parentTF, string childName)
     {
