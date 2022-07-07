@@ -25,6 +25,7 @@ public class TankManager : MonoBehaviour
     public int DestoryedWeekness;
 
     public GameObject dead;
+    public GameObject DeathAudio;
 
     Transform WarningObject;
     Transform TankTrackVertical1;
@@ -107,9 +108,10 @@ public class TankManager : MonoBehaviour
 
         Move();
 
-        if(DestoryedWeekness == 3) 
+        if(DestoryedWeekness == 3&&!isDead) 
         {
-            Death1();
+            isDead = true;
+            Invoke("Death1", 2f);
         }
 
     }
@@ -238,28 +240,35 @@ public class TankManager : MonoBehaviour
 
     void AniMGunStart()
     {
+        GetChild(this.transform, "Ì¹¿Ë»úÇ¹Éä»÷£¨6Ãë£©").gameObject.SetActive(true);
         BulletShoot.SetBool("MGun", true);
         Invoke("AniMGunStop", bulletAmount * bulletFrequency);
     }
     void AniMGunStop()
     {
+        GetChild(this.transform, "Ì¹¿Ë»úÇ¹Éä»÷£¨6Ãë£©").gameObject.SetActive(false);
         BulletShoot.SetBool("MGun", false);
         Invoke("AniMGunStart", MachineGunShootTime- bulletAmount * bulletFrequency);
     }
 
     void AniShellShootStart()
     {
+        GetChild(this.transform, "Ì¹¿ËÅÚµ¯·¢Éä").gameObject.SetActive(false);
+        
         ShellShoot.SetBool("Shoot", true);
         Invoke("AniShellShootStop", 3.0f);
     }
     void AniShellShootStop()
     {
+        GetChild(this.transform, "Ì¹¿ËÅÚµ¯·¢Éä").gameObject.SetActive(true);
         ShellShoot.SetBool("Shoot", false);
         Invoke("AniShellShootStart", ShellShootTime - 3.0f);
     }
 
     public void Death1()
     {
+        GameObject Audio = (GameObject)Instantiate(DeathAudio);
+        Audio.transform.localPosition = this.transform.position;
         isDead = true;
         GameObject go = (GameObject)Instantiate(dead);
         go.transform.localScale = this.transform.localScale;

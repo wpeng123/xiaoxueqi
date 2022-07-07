@@ -12,6 +12,7 @@ public class CircleEnemyManager : MonoBehaviour
     public float Deathtime;
     bool death = false;
     public GameObject dead;
+    public GameObject DeathAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +53,8 @@ public class CircleEnemyManager : MonoBehaviour
 
     public void Death1()
     {
+        GameObject Audio = (GameObject)Instantiate(DeathAudio);
+        Audio.transform.localPosition = this.transform.position;
         death = true;
         GameObject go = (GameObject)Instantiate(dead);
         go.transform.localScale = this.transform.localScale;

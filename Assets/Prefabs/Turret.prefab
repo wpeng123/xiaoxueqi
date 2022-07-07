@@ -440,6 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Deathtime: 0.4
   dead: {fileID: 8095337191244620030, guid: 24efc9cecf930624cb7e4bb30563fa14, type: 3}
+  DeathAudio: {fileID: 7888432762556685799, guid: a82d60d819e73724d8e46f87f3a56989, type: 3}
 --- !u!58 &4324816879008599536
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -491,9 +492,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 488447450}
   target: {fileID: 0}
-  counter: 0
-  nearest_attack_distance: 0
-  farthest_attack_distance: 0
+  counter: 1
+  nearest_attack_distance: 5
+  farthest_attack_distance: 40
   bulletspeed: 20
   bulletscale: 1
   bulletDeathTime: 10
@@ -513,7 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  rotationSpeed: 0
+  rotationSpeed: 1
 --- !u!1001 &5888314603256628879
 PrefabInstance:
   m_ObjectHideFlags: 0

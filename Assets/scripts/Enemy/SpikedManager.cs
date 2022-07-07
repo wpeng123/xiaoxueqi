@@ -25,6 +25,8 @@ public class SpikedManager : MonoBehaviour
         playermove2 b = obj.GetComponent<playermove2>();
         if (b != null)
         {
+            //Debug.Log("1");
+            GameObject.Find("ShakeCameraManager").GetComponent<Tools>().ShakeScreen(0.2f, 0.01f);
             //Debug.Log("has collision");
             obj.GetComponent<Rigidbody2D>().AddForce(new Vector2(obj.transform.position.x - this.transform.position.x, obj.transform.position.y - this.transform.position.y) * a);//a是力的大小
         }

@@ -123,6 +123,7 @@ MonoBehaviour:
   acceleratedSpeed: 0
   Deathtime: 0.4
   dead: {fileID: 1144637430354876686, guid: 23351aec39844aa45a4fd572d527e621, type: 3}
+  DeathAudio: {fileID: 7888432762556685799, guid: a82d60d819e73724d8e46f87f3a56989, type: 3}
 --- !u!60 &6839946775856593405
 PolygonCollider2D:
   m_ObjectHideFlags: 0

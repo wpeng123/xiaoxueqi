@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1425744303249579909}
   - component: {fileID: 1425744303249579908}
   - component: {fileID: 7849233175791962225}
+  - component: {fileID: -1603638919566352815}
+  - component: {fileID: -9066014553251616028}
   m_Layer: 0
   m_Name: Rock3
   m_TagString: Untagged
@@ -118,3 +120,36 @@ PolygonCollider2D:
       - {x: 0.13206896, y: -0.18206096}
       - {x: 0.20204544, y: -0.13807222}
       - {x: 0.20004696, y: 0.060039148}
+--- !u!50 &-1603638919566352815
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425744303249579907}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!114 &-9066014553251616028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425744303249579907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8d40706a8ac464a8aada6ec43965e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

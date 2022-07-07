@@ -7,6 +7,7 @@ public class TurretManager : MonoBehaviour
     public float Deathtime;
     public GameObject dead;
     bool isDead;
+    public GameObject DeathAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +28,10 @@ public class TurretManager : MonoBehaviour
             playermove2 ifplayer = other.collider.GetComponent<playermove2>();
             if (ifplayer != null)
             {
-                //transform.GetComponent<Ai_Move_main>().enabled = false;
-                //Destroy(transform.GetComponent<Rigidbody2D>());
+                GameObject.Find("ShakeCameraManager").GetComponent<Tools>().ShakeScreen(0.05f, 0.01f);
+                transform.GetComponent<Ai_Move_main>().enabled = false;
+                transform.GetComponent<SpikedCircleManager>().enabled = false;
+                Destroy(transform.GetComponent<Rigidbody2D>());
                 isDead = true;
                 Death1();
             }
@@ -37,11 +40,12 @@ public class TurretManager : MonoBehaviour
 
     public void Death1()
     {
-
         GameObject go = (GameObject)Instantiate(dead);
         go.transform.localScale = this.transform.localScale;
         go.transform.localPosition = this.transform.position;
         go.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
+        GameObject Audio = (GameObject)Instantiate(DeathAudio);
+        Audio.transform.localPosition = this.transform.position;
         Transform boom = GetChild(this.transform, "Boom");
         boom.gameObject.SetActive(true);
         //Debug.Log("2");
