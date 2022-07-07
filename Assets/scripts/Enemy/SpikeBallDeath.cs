@@ -25,7 +25,7 @@ public class SpikeBallDeath : MonoBehaviour
             {
                 transform.parent.GetComponent<SpikedManager>().enabled = false;
                 transform.parent.GetComponent<SpikedCircleManager>().enabled = false;
-                //Destroy(transform.parent.GetComponent<Rigidbody2D>());
+                Destroy(transform.parent.GetComponent<Rigidbody2D>());
                 isDead = true;
                 Death1();
             }
