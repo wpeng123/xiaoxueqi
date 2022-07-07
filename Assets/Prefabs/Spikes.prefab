@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 840235350}
   - component: {fileID: 840235351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4772228833807910607}
   - component: {fileID: 3654236888218113723}
   - component: {fileID: 545123101691423718}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: SpikeBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 8348154975895015557}
   - component: {fileID: 6548053258823883607}
   - component: {fileID: 2092349844}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Spikes
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2230035626533974837}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
       propertyPath: m_IsActive

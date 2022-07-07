@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2678026005205638852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2678026005205638854}
+  - component: {fileID: 2678026005205638853}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2678026005205638854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678026005205638852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -38.65926, y: 15.910749, z: -2.2146673}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2678026005205638853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678026005205638852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4ecd29420fd394abbe810c6c2a113e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  enemys_delay: 2
+  wave_max_interval: 20
+  enemys:
+  - {fileID: 823346361459286322, guid: 20c4b6c78a9a94648a9b92531c5e239e, type: 3}
+  - {fileID: 8368116030181538377, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
+  - {fileID: 5961876977008112651, guid: 8e3deee56cd625c459a5ef24e9ceb343, type: 3}
+  - {fileID: 8287876941832617316, guid: c0f4bf54f38ae234488268743342143f, type: 3}
+  - {fileID: 8973265535122595240, guid: f9891432de0898c41b64019217c8b9c5, type: 3}
+  Generating_point:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Generating_point_check:
+  - 000001000001
+  - 110010111010
+  - 001100001100
+  - 001100001100
+  - 010010011010
+  - 010010011010
+  - 001100001100
+  - 001100001100
+  - 110010111010
+  stage1_wave1: 0200000000000000000000000000000000000000
+  stage1_wave2: 0200000002000000000000000000000000000000
+  stage1_wave3: 0000000004000000000000000000000000000000
+  stage1_wave4: 0000000002000000020000000000000000000000
+  stage1_wave5: 0200000004000000020000000000000000000000
+  stage1_wave6: 0000000000000000010000000200000000000000
+  stage2_wave1: 0200000000000000020000000000000000000000
+  stage2_wave2: 0000000002000000040000000000000000000000
+  stage2_wave3: 0200000002000000010000000100000000000000
+  stage2_wave4: 0200000002000000020000000200000000000000
+  stage2_wave5: 0000000004000000040000000200000000000000
+  stage2_wave6: 0200000004000000000000000000000001000000

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2111119182}
   - component: {fileID: 2111119183}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: WormShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6553588379766562575}
   - component: {fileID: 9071991166378271615}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 8658735157633026934}
   - component: {fileID: 2198173231460478511}
   - component: {fileID: 2024961082833080004}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: MechaWorm
   m_TagString: enemy_shooter
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: d39bb52403cddee49a838b6576141bfb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -286,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
       propertyPath: m_IsActive

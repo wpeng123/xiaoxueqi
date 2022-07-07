@@ -3,19 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - enemy_shooter
+  - enemy_spider
+  - enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Bullet
+  - Doll
+  - Map
+  - Confiner
   - 
   - 
   - 
