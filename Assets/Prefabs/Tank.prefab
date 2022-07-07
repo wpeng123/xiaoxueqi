@@ -1729,7 +1729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  rotationSpeed: 0.1
+  rotationSpeed: 0.12
 --- !u!1 &7774936459255500260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,7 +2198,7 @@ MonoBehaviour:
   ShellDeathTime: 10
   WarningTime: 1
   WarningFrequency: 0.1
-  MachineGunShootTime: 6
+  MachineGunShootTime: 8
   bulletspeed: 30
   bulletscale: 1.2
   bulletDeathTime: 10
