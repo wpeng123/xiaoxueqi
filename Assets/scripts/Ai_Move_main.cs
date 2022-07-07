@@ -17,6 +17,7 @@ public struct Ai_variable
     public float distance;
     public float attack_distance_0;
     public float attack_distance_1;
+
     // float distance_x;//ai与目标之间的距离 直线
     public float distance_apart;//保持距离
 
@@ -39,11 +40,13 @@ public class Ai_Move_main : MonoBehaviour
     public Ai_variable enemy_stru;
     public Ai_variable target_stru;
     public Rigidbody2D enemy;//获取敌人以及敌人目标
-    public Rigidbody2D target;
+    public GameObject target;
     public int counter;//用于记录球体运动情况 被卡住time
 
     public float nearest_attack_distance;
     public float farthest_attack_distance;
+
+    public float retrear_speed_weight;
 
     public float bulletspeed;
     public float bulletscale;
@@ -64,6 +67,7 @@ public class Ai_Move_main : MonoBehaviour
     }
     void initialie()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
         is_attack = 1;
         if (attack_interval_time == 0)
         {
@@ -119,10 +123,10 @@ public class Ai_Move_main : MonoBehaviour
             enemy_stru.distance_apart = 0.1f;//enemy需要与target之间保持的距离
 
         //不同距离移动速度的权值
-        weight.stage_03 = 10.70f;
+        weight.stage_03 = 9.00f;
         weight.stage_05 = 8.50f;
         weight.stage_10 = 8.00f;
-        weight.stage_20 = 7.00f;
+        weight.stage_20 = 7.50f;
         weight.stage_40 = 0.10f;
 
 
@@ -313,7 +317,6 @@ public class Ai_Move_main : MonoBehaviour
             need_weight = weight.stage_20;
         else if (enemy_stru.distance > 5f)
             need_weight = weight.stage_10;
-
         else if (enemy_stru.distance > 3f)
             need_weight = weight.stage_05;
         else
@@ -398,6 +401,7 @@ public class Ai_Move_main : MonoBehaviour
     {
 
         update_information();
+        //Debug.Log(enemy.tag + " " + enemy_stru.situation);
         switch (enemy_stru.situation)
         {
             case Situation.chase:
@@ -446,8 +450,24 @@ public class Ai_Move_main : MonoBehaviour
                     break;
                 }
             case Situation.retreat:
-                {                
-                    enemy.velocity = getforce_shooter() * (-0.5f);
+                {
+                    if (enemy.tag == "enemy_spider")
+                    {
+                        Animator spider_chase = GetChild(enemy.transform, "TurretWalk1").GetComponent<Animator>();
+                        spider_chase.SetBool("Walk", true);
+
+                        enemy.velocity = getforce_shooter();
+                    }
+                    else if (enemy.tag == "enemy_shooter")
+                    {
+                        Animator spider_chase = GetChild(enemy.transform, "ArmouredCarRun1").GetComponent<Animator>();
+                        spider_chase.SetBool("Run", true);
+                        enemy.velocity = getforce();
+                    }
+                    if (retrear_speed_weight!=0)
+                        enemy.velocity = getforce_shooter() * (-retrear_speed_weight);
+                    else
+                    enemy.velocity = getforce_shooter() * (-0.8f);
                     break;
                 }
 

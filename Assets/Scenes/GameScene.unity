@@ -60917,11 +60917,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1277518642, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
       propertyPath: maxpower
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 946307657693131723, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
       propertyPath: m_Name
       value: MechaBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 946307657693131723, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7384137737458259292, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
       propertyPath: m_RootOrder
@@ -61404,6 +61408,30 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1961108416}
+    - target: {fileID: 488447448, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
+      propertyPath: bulletAmount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 488447448, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
+      propertyPath: bulletFrequency
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 488447448, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
+      propertyPath: attack_interval_time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 488447448, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
+      propertyPath: retrear_speed_weight
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 488447448, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
+      propertyPath: nearest_attack_distance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488447448, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
+      propertyPath: farthest_attack_distance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1141430228020861557, guid: 8044f4d6f103c1642b89b95992927753, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -62480,11 +62508,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996040833, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: speed
-      value: 4.89
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1996040833, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: rotationSpeed
-      value: -0.08
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331249880072079387, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2889771331430648384, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3960155875934589067, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_RootOrder
@@ -62532,15 +62568,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416676994730940383, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_Constraints
-      value: 7
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416676994730940383, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945757837129621333, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6026517943833449376, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_Name
       value: Spike
       objectReference: {fileID: 0}
+    - target: {fileID: 6026517943833449376, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026517943833449376, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6741122090908463305, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741122090908463305, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305141991180726566, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fa60971dc563f044a82a5003b62952a, type: 3}
