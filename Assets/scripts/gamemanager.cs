@@ -27,89 +27,59 @@ public class gamemanager : MonoBehaviour
     public int[] stage2_wave4;
     public int[] stage2_wave5;
     public int[] stage2_wave6;
-    public int[] stage3_wave1;
-    public int[] stage3_wave2;
-    public int[] stage3_wave3;
-    public int[] stage3_wave4;
-    public int[] stage3_wave5;
-    public int[] stage3_wave6;
     public int[,,] stage_wave;
     // Start is called before the first frame update
     private void Awake()
     {
         instance = this;
-        stage_wave = new int[3, 6, 6];
-        for (int i = 0; i < 6; i++)
+        stage_wave = new int[2, 6, 5];
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[0, 0, i] = stage1_wave1[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[0, 1, i] = stage1_wave2[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[0, 2, i] = stage1_wave3[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[0, 3, i] = stage1_wave4[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[0, 4, i] = stage1_wave5[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[0, 5, i] = stage1_wave6[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[1, 0, i] = stage2_wave1[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[1, 1, i] = stage2_wave2[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[1, 2, i] = stage2_wave3[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[1, 3, i] = stage2_wave4[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[1, 4, i] = stage2_wave5[i];
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             stage_wave[1, 5, i] = stage2_wave6[i];
-        }
-        for (int i = 0; i < 6; i++)
-        {
-            stage_wave[2, 0, i] = stage3_wave1[i];
-        }
-        for (int i = 0; i < 6; i++)
-        {
-            stage_wave[2, 1, i] = stage3_wave2[i];
-        }
-        for (int i = 0; i < 6; i++)
-        {
-            stage_wave[2, 2, i] = stage3_wave3[i];
-        }
-        for (int i = 0; i < 6; i++)
-        {
-            stage_wave[2, 3, i] = stage3_wave4[i];
-        }
-        for (int i = 0; i < 6; i++)
-        {
-            stage_wave[2, 4, i] = stage3_wave5[i];
-        }
-        for (int i = 0; i < 6; i++)
-        {
-            stage_wave[2, 5, i] = stage3_wave6[i];
         }
         UpdateGameState(Gamestate.Playing);
     }
@@ -180,13 +150,13 @@ OnGameStateChanged?.Invoke(newState);
         for(int j=0;j<6;j++)
         {
             int count=0;
-            for(int a=0;a<6;a++)
+            for(int a=0;a<5;a++)
             {
                 count += stage_wave[stage-1, j, a];
             }
             int[] enemy_count = new int[count];
             int index = 0;
-            for(int a=0;a<6;a++)
+            for(int a=0;a<5;a++)
             {
                 for(int b=0;b< stage_wave[stage-1, j, a];b++)
                 {
@@ -202,25 +172,22 @@ OnGameStateChanged?.Invoke(newState);
             }
             while(true)
             {
-                foreach (var k in Generating_point)
+                GameObject k;
+                if(j<5)
+                k = Generating_point[r.Next(0, Generating_point.Length)];
+                else
+                k = Generating_point[0];
+                if(Generating_point_check[Array.IndexOf(Generating_point,k)][(stage - 1) * 6 + j]=='1')
                 {
-                    if(Generating_point_check[Array.IndexOf(Generating_point,k)][(stage - 1) * 6 + j]=='1')
+                    Instantiate(enemys[enemy_count[count - 1]], k.transform);
+                    count--;
+                    if (count == 0)
                     {
-                        Instantiate(enemys[enemy_count[count - 1]], k.transform);
-                        count--;
-                        if (count == 0)
-                        {
-                            Debug.Log("end");
-                            break;
-                        }
-                        await Task.Delay((int)(enemys_delay * 1000));
+                        Debug.Log("end");
+                        break;
                     }
-                }
-                if (count == 0)
-                {
-                    Debug.Log("end");
-                    break;
-                }
+                    await Task.Delay((int)(enemys_delay * 1000));
+                }              
             }
             for(int i=0;i< wave_max_interval;i++)
             {
@@ -230,9 +197,9 @@ OnGameStateChanged?.Invoke(newState);
                     break;
                 }*/
                 await Task.Delay((int)(1000));
-            }
-           
+            }     
         }
+
         return;
     }
 

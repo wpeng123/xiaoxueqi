@@ -63974,6 +63974,67 @@ Transform:
   m_Father: {fileID: 793570473}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2134593092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134593094}
+  - component: {fileID: 2134593093}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2134593093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134593092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4ecd29420fd394abbe810c6c2a113e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  enemys_delay: 4
+  wave_max_interval: 15
+  enemys: []
+  Generating_point: []
+  Generating_point_check: []
+  stage1_wave1: 
+  stage1_wave2: 
+  stage1_wave3: 
+  stage1_wave4: 
+  stage1_wave5: 
+  stage1_wave6: 
+  stage2_wave1: 
+  stage2_wave2: 
+  stage2_wave3: 
+  stage2_wave4: 
+  stage2_wave5: 
+  stage2_wave6: 
+--- !u!4 &2134593094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134593092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -38.65926, y: 15.910749, z: -2.2146673}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &416889138603621649
 PrefabInstance:
   m_ObjectHideFlags: 0
