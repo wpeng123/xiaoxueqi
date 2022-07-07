@@ -11,10 +11,8 @@ public class Stop : MonoBehaviour
     public GameObject righthook;
     public Rigidbody2D rb;
     public Rigidbody2D rb2;
-    public Rigidbody2D rb3;
-    public Rigidbody2D rb4;
-    public Rigidbody2D rb5;
-    public Rigidbody2D rb6;
+     public Rigidbody2D rb4;
+     public Rigidbody2D rb6;
     public Rigidbody2D rb7;
     public Rigidbody2D rb8;
     public Rigidbody2D rb9;
@@ -84,10 +82,8 @@ public class Stop : MonoBehaviour
     private void down()
     {
         rb2.gravityScale = 0.3f;
-        rb3.gravityScale = 0.3f;
-        rb4.gravityScale = 0.3f;
-        rb5.gravityScale = 0.3f;
-        rb6.gravityScale = 0.3f;
+         rb4.gravityScale = 0.3f;
+         rb6.gravityScale = 0.3f;
         rb7.gravityScale = 0.3f;
         rb8.gravityScale = 0.3f;
         rb9.gravityScale = 0.3f;

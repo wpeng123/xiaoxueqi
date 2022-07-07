@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86c55e81263eba04b869c0e703b2417e, type: 3}
-  m_Name: upgrade2
+  m_Name: upgradehealth
   m_EditorClassIdentifier: 
-  name: upgrade2
-  itemimage: {fileID: 21300000, guid: f93eab0bab544a844840e99b0e67c20e, type: 3}
+  name: upgradehealth
+  itemimage: {fileID: 21300000, guid: 075e8091fda171343ab2e3c9602ff886, type: 3}
   itemhiled: 1
-  iteminfo: "Upgrade2!\n\n\u8FD9\u662F\u4E00\u5757\u53EF\u4EE5\u7528\u6765\u5347\u7EA7\u4F60\u7684\u6700\u5927\u901F\u5EA6\u7684\u7ECF\u9A8C\u5361\uFF0C\u62D6\u52A8\u5B83\u5230\u5DE6\u8FB9\u7684\u5347\u7EA7\u69FD\u6765\u4F7F\u7528\n\n\u6700\u5927\u901F\u5EA6+1\n\n\n\n"
+  iteminfo: "Upgradehealth!\n\n\u8FD9\u662F\u4E00\u5757\u53EF\u4EE5\u7528\u6765\u5347\u7EA7\u4F60\u7684\u751F\u547D\u503C\u7684\u7ECF\u9A8C\u5361\uFF0C\u62D6\u52A8\u5B83\u5230\u5DE6\u8FB9\u7684\u5347\u7EA7\u69FD\u6765\u4F7F\u7528\n\n\u751F\u547D\u503C+1\n\n\n\n"

@@ -39,6 +39,7 @@ public class InventoryManager : MonoBehaviour
     {
         for (int i = 0; i < instance.slotGrid.transform.childCount; i++)
         {
+            Debug.Log(instance.slotGrid.transform.childCount);
             if (instance.slotGrid.transform.childCount == 0)
                 break;
 

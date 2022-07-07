@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalparent: {fileID: 0}
+  thisitem: {fileID: 0}
   mybag: {fileID: 11400000, guid: 229872fea54b08044b3f8c34da8f2b4c, type: 2}
   currentItemID: 0
 --- !u!225 &7902889705520296014
@@ -371,7 +372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &154059398933202785
 RectTransform:
   m_ObjectHideFlags: 0

@@ -9,10 +9,8 @@ public class hooktop : MonoBehaviour
     public    Rigidbody2D rb;
     public    Rigidbody2D rb2;
     public Rigidbody2D rb3;
-    public Rigidbody2D rb4;
-    public Rigidbody2D rb5;
-    public Rigidbody2D rb6;
-    public Rigidbody2D rb7;
+     public Rigidbody2D rb5;
+     public Rigidbody2D rb7;
     public Rigidbody2D rb8;
     public Rigidbody2D rb9;
     public Rigidbody2D rb0;
@@ -24,10 +22,8 @@ public class hooktop : MonoBehaviour
         
         rb2.gravityScale = 0;
         rb3.gravityScale = 0;
-        rb4.gravityScale = 0;
-        rb5.gravityScale = 0;
-        rb6.gravityScale = 0;
-        rb7.gravityScale = 0;
+         rb5.gravityScale = 0;
+         rb7.gravityScale = 0;
         rb8.gravityScale = 0;
         rb9.gravityScale = 0;
         rb0.gravityScale = 0;

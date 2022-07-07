@@ -5,9 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
+<<<<<<< Updated upstream
   - enemy_shooter
   - Bullet
   - enemy_spider
+=======
+  - Assemblygroove
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -17,9 +21,15 @@ TagManager:
   - UI
   - Player
   - Doll
+<<<<<<< Updated upstream
   - Enemy
   - Map
   - Bullet
+=======
+  - 
+  - beibao
+  - zhuangbei
+>>>>>>> Stashed changes
   - 
   - 
   - 

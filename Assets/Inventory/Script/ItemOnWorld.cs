@@ -10,13 +10,17 @@ public class ItemOnWorld : MonoBehaviour
 
     private void Update()
     {
-        if (Box.isget == true)
+       if (Crabed.i == true)
         {
-            AddNewItem();
-            Destroy(gameObject);
+            Crabed.i = false;
+           
         }
-    } 
-    
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+         AddNewItem();
+            Destroy(gameObject);
+    }
     public void AddNewItem()
     {
         if (!playerinventory.itemlist.Contains(thisitem))
@@ -36,6 +40,6 @@ public class ItemOnWorld : MonoBehaviour
         {
             thisitem.itemhiled += 1;
         }
-        InventoryManager.RefreshItem();
+       // InventoryManager.RefreshItem();
     }
 }
