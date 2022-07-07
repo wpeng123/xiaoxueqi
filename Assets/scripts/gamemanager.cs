@@ -12,8 +12,9 @@ public class gamemanager : MonoBehaviour
     public float wave_max_interval; //Ãë
     public static event Action<Gamestate> OnGameStateChanged;
     public static int stage=1;//µÚ¼¸¹Ø
-    public GameObject[] enemys;
+    public GameObject[] enemys; 
     public GameObject[] Generating_point;
+    public String[] Generating_point_check;
     public int[] stage1_wave1;
     public int[] stage1_wave2;
     public int[] stage1_wave3;
@@ -203,14 +204,17 @@ OnGameStateChanged?.Invoke(newState);
             {
                 foreach (var k in Generating_point)
                 {
-                    Instantiate(enemys[enemy_count[count-1]], k.transform);               
-                    count--;
-                    if (count == 0)
+                    if(Generating_point_check[Array.IndexOf(Generating_point,k)][(stage - 1) * 6 + j]=='1')
                     {
-                        Debug.Log("end");
-                        break;
+                        Instantiate(enemys[enemy_count[count - 1]], k.transform);
+                        count--;
+                        if (count == 0)
+                        {
+                            Debug.Log("end");
+                            break;
+                        }
+                        await Task.Delay((int)(enemys_delay * 1000));
                     }
-                    await Task.Delay((int)(enemys_delay * 1000));
                 }
                 if (count == 0)
                 {
