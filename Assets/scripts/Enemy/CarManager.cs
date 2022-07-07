@@ -29,6 +29,7 @@ public class CarManager : MonoBehaviour
             playermove2 ifplayer = other.collider.GetComponent<playermove2>();
             if (ifplayer != null)
             {
+                GameObject.Find("ShakeCameraManager").GetComponent<Tools>().ShakeScreen(0.05f, 0.01f);
                 transform.GetComponent<SpikedCircleManager>().enabled = false;
                 transform.GetComponent<Ai_Move_main>().enabled = false;
                 Destroy(transform.GetComponent<Rigidbody2D>());

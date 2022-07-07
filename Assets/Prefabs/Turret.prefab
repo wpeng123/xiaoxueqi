@@ -440,6 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Deathtime: 0.4
   dead: {fileID: 8095337191244620030, guid: 24efc9cecf930624cb7e4bb30563fa14, type: 3}
+  DeathAudio: {fileID: 7888432762556685799, guid: a82d60d819e73724d8e46f87f3a56989, type: 3}
 --- !u!58 &4324816879008599536
 CircleCollider2D:
   m_ObjectHideFlags: 0

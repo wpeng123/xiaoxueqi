@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3047912764650235473}
   - component: {fileID: 6496090994272398346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawner (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 8122162254998950619}
   - component: {fileID: 8848040215227950234}
   - component: {fileID: 7435122546881474321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7322588383282534505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 6930794245827850135}
   - component: {fileID: 8356360781264255425}
   - component: {fileID: 1434419707368937413}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmouredCarRun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 5391918033767721179}
   - component: {fileID: 7721418063002375923}
   - component: {fileID: 489163282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmouredCar
   m_TagString: enemy_shooter
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 5480019275221140686}
   - component: {fileID: 5540711921790612853}
   - component: {fileID: 5748690526500663130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArmouredCarShoot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 984764414462467695}
   - component: {fileID: 1849070331822590843}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1583135879401477889}
   - component: {fileID: 2552058218369118030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CarShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,6 +712,10 @@ PrefabInstance:
     - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
       propertyPath: m_Name
       value: Boom
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
       propertyPath: m_IsActive

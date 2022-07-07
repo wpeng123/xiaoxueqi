@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using static Tools;
 public class playermove2 : MonoBehaviour
 {
     public float minenergy;
@@ -50,6 +50,20 @@ public class playermove2 : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collisioninfo)
     {
+        int i = Random.Range(0, 2);
+        switch (i)
+        {
+            case 0:
+                GetChild(this.transform, "×²»÷Éù1").gameObject.SetActive(false);
+                GetChild(this.transform, "×²»÷Éù1").gameObject.SetActive(true);
+                GetChild(this.transform, "×²»÷Éù2").gameObject.SetActive(false);
+                break;
+            case 1:
+                GetChild(this.transform, "×²»÷Éù2").gameObject.SetActive(false);
+                GetChild(this.transform, "×²»÷Éù2").gameObject.SetActive(true);
+                GetChild(this.transform, "×²»÷Éù1").gameObject.SetActive(false);
+                break;
+        }
         //if (speed > 8.0)
         //{
         //    if (collisioninfo.gameObject.tag == "enemy")

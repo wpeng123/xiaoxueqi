@@ -6,6 +6,7 @@ using static Tools;
 public class TankWeeknessManager : MonoBehaviour
 {
     public GameObject Broken;
+    public GameObject DeathAudio;
     bool isBroken;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class TankWeeknessManager : MonoBehaviour
             playermove2 ifplayer = other.collider.GetComponent<playermove2>();
             if (ifplayer != null)
             {
+                GameObject.Find("ShakeCameraManager").GetComponent<Tools>().ShakeScreen(0.2f, 0.01f);
                 isBroken = true;
                 Death1();
             }
@@ -35,6 +37,9 @@ public class TankWeeknessManager : MonoBehaviour
 
     public void Death1()
     {
+        GameObject Audio = (GameObject)Instantiate(DeathAudio);
+        Audio.transform.localPosition = this.transform.position;
+        transform.GetComponent<Collider2D>().enabled = false;
         Transform boom = GetChild(this.transform, "Boom");
         boom.gameObject.SetActive(true);
         //Debug.Log("2");

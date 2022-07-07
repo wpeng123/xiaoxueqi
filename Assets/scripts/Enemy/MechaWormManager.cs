@@ -49,6 +49,7 @@ public class MechaWormManager : MonoBehaviour
         playermove2 ifplayer = other.collider.GetComponent<playermove2>();
         if (ifplayer != null)
         {
+            GameObject.Find("ShakeCameraManager").GetComponent<Tools>().ShakeScreen(0.05f, 0.01f);
             Death1();
             //Debug.Log("2");
             Invoke("Death2", Deathtime);

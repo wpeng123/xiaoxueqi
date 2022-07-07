@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6811132102422913817}
   - component: {fileID: 6811132102422913814}
   - component: {fileID: 4737730455864102501}
+  - component: {fileID: 5522622262300715425}
+  - component: {fileID: -6061698284070986451}
   m_Layer: 0
   m_Name: Rock5
   m_TagString: Untagged
@@ -118,3 +120,36 @@ PolygonCollider2D:
       - {x: -0.39828217, y: -0.30866984}
       - {x: -0.008698501, y: -0.4808907}
       - {x: 0.48519972, y: -0.4817583}
+--- !u!50 &5522622262300715425
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811132102422913815}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!114 &-6061698284070986451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811132102422913815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8d40706a8ac464a8aada6ec43965e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

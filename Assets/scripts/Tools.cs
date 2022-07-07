@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tools
+public class Tools : MonoBehaviour
 {
-    
-    public static void ShakeScreen(float time,float frequency)
+    public GameObject MainCamera;
+    public GameObject ShakeCamera;
+    float ShakeTime;
+    float ShakeFrequency;
+    bool shake;
+    public void ShakeScreen(float time,float frequency)
     {
-        GameObject MainCamera;
-        GameObject ShakeCamera;
-        MainCamera = GameObject.Find("Main Camera");
-        ShakeCamera = GameObject.Find("ShakeCamera");    
-        for(int i = 0; i < time; i++)
-        {
-            new WaitForSeconds(1);
-            Debug.Log(i);
-        }
+        //Debug.Log("2");
+        shake = true;
+        ShakeTime = time;
+        ShakeFrequency = frequency;
+        Invoke("ToCameraA",frequency);
+        Invoke("ShakeEnd", time);
     }
     // Start is called before the first frame update
     public static Transform GetChild(Transform parentTF, string childName)
@@ -40,11 +41,40 @@ public class Tools
         return null;
     }
 
-    //public void ToCameraA(GameObject A, GameObject B,float frequency)
-    //{
-    //    A.SetActive(true);
-    //    B.SetActive(false);
-    //    Invoke("ToCameraB", frequency);
-    //}
+    void ToCameraA()
+    {
+        MainCamera.SetActive(true);
+        ShakeCamera.SetActive(false);
+        //ShakeCamera.GetComponent<Camera>().enabled = false;
+        //ShakeCamera.GetComponent<AudioListener>().enabled = false;
+        if (shake)
+        { 
+            Invoke("ToCameraB", ShakeFrequency);
+        }
+    }
+
+    void ToCameraB()
+    {
+        if (shake)
+        {
+            MainCamera.SetActive(false);
+            ShakeCamera.SetActive(true);
+            //ShakeCamera.GetComponent<Camera>().enabled = true;
+            //ShakeCamera.GetComponent<AudioListener>().enabled = true;
+            Invoke("ToCameraA", ShakeFrequency);
+        }
+    }
+
+    void ShakeEnd()
+    {
+        shake = false;
+        Invoke("ToCameraA", ShakeFrequency);
+    }
+
+    void Update()
+    {
+        Vector3 position = new Vector3(MainCamera.transform.position.x, MainCamera.transform.position.y,MainCamera.transform.position.z);
+        ShakeCamera.transform.position = position;
+    }
 
 }
