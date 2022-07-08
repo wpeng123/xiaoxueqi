@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1382795297434599083}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8024682339783220446}
   - component: {fileID: 4989155595336155867}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1276542330242940733}
   - component: {fileID: 7399658991065597925}
   - component: {fileID: 7354052874613060676}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TurretWalk1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 2791169195814155355}
   - component: {fileID: 1124873898701298284}
   - component: {fileID: 8902944432025549680}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TurretShoot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8407115826924784551}
   - component: {fileID: 4818906912584412791}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 488447450}
   - component: {fileID: 488447448}
   - component: {fileID: 488447449}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Turret
   m_TagString: enemy_spider
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8368116030181538377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6578934, y: 1.4268876, z: -13.416361}
+  m_LocalPosition: {x: -1.6578934, y: 1.4268876, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6823142381534138953}
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 488447450}
-  target: {fileID: 0}
+  target: {fileID: 1277518641, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
   counter: 1
   nearest_attack_distance: 5
   farthest_attack_distance: 40
@@ -532,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4851575694794625036, guid: 0b9ca0af492e22e4ca5e5778fdd7e074, type: 3}
       propertyPath: m_IsActive

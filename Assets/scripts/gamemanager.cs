@@ -199,7 +199,7 @@ OnGameStateChanged?.Invoke(newState);
                 await Task.Delay((int)(1000));
             }     
         }
-
+        UpdateGameState(Gamestate.Prize_Clawing);
         return;
     }
 
