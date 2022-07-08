@@ -11,8 +11,8 @@ public class gamemanager : MonoBehaviour
     public float enemys_delay; //秒
     public float wave_max_interval; //秒
     public static event Action<Gamestate> OnGameStateChanged;
-    public static int stage=1;//第几关
-    public GameObject[] enemys; 
+    public static int stage = 1;//第几关
+    public GameObject[] enemys;
     public GameObject[] Generating_point;
     public String[] Generating_point_check;
     public int[] stage1_wave1;
@@ -81,11 +81,12 @@ public class gamemanager : MonoBehaviour
         {
             stage_wave[1, 5, i] = stage2_wave6[i];
         }
+        Time.timeScale = 1;
         UpdateGameState(Gamestate.Playing);
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -117,7 +118,7 @@ public class gamemanager : MonoBehaviour
                 HandleVictory();
                 break;
         }
-OnGameStateChanged?.Invoke(newState);
+        OnGameStateChanged?.Invoke(newState);
     }
 
     private void HandleVictory()
@@ -139,70 +140,75 @@ OnGameStateChanged?.Invoke(newState);
     {
         await Task.Delay(10000);
         Debug.Log("stop");
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         //await 抓娃娃机显示
 
 
     }
 
-    private async void HandlePlaying()
+    private void HandlePlaying()
     {
-        for(int j=0;j<6;j++)
+        Time.timeScale = 1;
+        Generating_enemy();
+        //UpdateGameState(Gamestate.Prize_Clawing);
+    }
+    private async void Generating_enemy()
+    {
+        for (int j = 0; j < 6; j++)
         {
-            int count=0;
-            for(int a=0;a<5;a++)
+            int count = 0;
+            for (int a = 0; a < 5; a++)
             {
-                count += stage_wave[stage-1, j, a];
+                count += stage_wave[stage - 1, j, a];
             }
             int[] enemy_count = new int[count];
             int index = 0;
-            for(int a=0;a<5;a++)
+            for (int a = 0; a < 5; a++)
             {
-                for(int b=0;b< stage_wave[stage-1, j, a];b++)
+                for (int b = 0; b < stage_wave[stage - 1, j, a]; b++)
                 {
                     enemy_count[index] = a;
                     index++;
-                }                    
+                }
             }
             System.Random r = new System.Random();
-            for (int i=0;i<1000;i++)
+            for (int i = 0; i < 1000; i++)
             {
                 int a = r.Next(0, count - 1);
                 swap(enemy_count, 0, a);
             }
-            while(true)
+            while (true)
             {
                 GameObject k;
-                if(j<5)
-                k = Generating_point[r.Next(0, Generating_point.Length)];
+                if (j < 5)
+                    k = Generating_point[r.Next(0, Generating_point.Length)];
                 else
-                k = Generating_point[0];
-                if(Generating_point_check[Array.IndexOf(Generating_point,k)][(stage - 1) * 6 + j]=='1')
+                    k = Generating_point[0];
+                if (Generating_point_check[Array.IndexOf(Generating_point, k)][(stage - 1) * 6 + j] == '1')
                 {
                     Instantiate(enemys[enemy_count[count - 1]], k.transform);
                     count--;
                     if (count == 0)
                     {
-                        Debug.Log("end");
+                        //Debug.Log("end");
                         break;
                     }
+                    //yield return new WaitForSeconds(enemys_delay);
                     await Task.Delay((int)(enemys_delay * 1000));
-                }              
+                }
             }
-            for(int i=0;i< wave_max_interval;i++)
+            for (int i = 0; i < wave_max_interval; i++)
             {
                 //检测敌人是否被消灭完
                 /*if(over)
                 {
                     break;
                 }*/
+                //yield return new WaitForSeconds(1.0f);
                 await Task.Delay((int)(1000));
-            }     
+            }
         }
-        //UpdateGameState(Gamestate.Prize_Clawing);
-        return;
     }
-
     private void HandleTeaching()
     {
         //教学，下一个状态为
@@ -218,7 +224,7 @@ OnGameStateChanged?.Invoke(newState);
         Defeat,
         Victory
     }
-    private void swap(int[] temp,int a,int b)
+    private void swap(int[] temp, int a, int b)
     {
         int t;
         t = temp[a];

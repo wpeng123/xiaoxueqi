@@ -493,8 +493,9 @@ MonoBehaviour:
   enemy: {fileID: 488447450}
   target: {fileID: 1277518641, guid: 72efc6949740ef141ac01e63412795fe, type: 3}
   counter: 1
-  nearest_attack_distance: 5
-  farthest_attack_distance: 10
+  nearest_attack_distance: 0
+  farthest_attack_distance: 0
+  retrear_speed_weight: 0
   bulletspeed: 20
   bulletscale: 1
   bulletDeathTime: 10

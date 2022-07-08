@@ -123,10 +123,10 @@ public class Ai_Move_main : MonoBehaviour
             enemy_stru.distance_apart = 0.1f;//enemy需要与target之间保持的距离
 
         //不同距离移动速度的权值
-        weight.stage_03 = 9.00f;
-        weight.stage_05 = 8.50f;
-        weight.stage_10 = 8.00f;
-        weight.stage_20 = 7.50f;
+        weight.stage_03 = 7.00f;
+        weight.stage_05 = 5.50f;
+        weight.stage_10 = 5.00f;
+        weight.stage_20 = 4.50f;
         weight.stage_40 = 0.10f;
 
 
