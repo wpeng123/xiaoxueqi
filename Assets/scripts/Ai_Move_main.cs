@@ -39,8 +39,8 @@ public class Ai_Move_main : MonoBehaviour
     public Ai_variable enemy_stru;
     public Ai_variable target_stru;
     public Rigidbody2D enemy;//获取敌人以及敌人目标
-    public Rigidbody2D target;
-    public int counter;//用于记录球体运动情况 被卡住time
+    public GameObject target;
+   // public int counter;//用于记录球体运动情况 被卡住time
 
     public float nearest_attack_distance;
     public float farthest_attack_distance;
