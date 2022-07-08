@@ -38,6 +38,7 @@ public class BulletManager : MonoBehaviour
         playermove2 ifplayer = other.collider.GetComponent<playermove2>();
         if (ifplayer != null)
         {
+
             death();
         }
     }
