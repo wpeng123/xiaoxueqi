@@ -40,6 +40,7 @@ public class BulletManager : MonoBehaviour
         if (ifplayer != null)
         {
             i--;
+            ifplayer.health--;
             death();
         }
     }

@@ -158,7 +158,7 @@ public class Hp : MonoBehaviour
                 a8.SetActive(false);
                 a9.SetActive(false);
                 a10.SetActive(false);
-                gamemanager.doll = true;
+                //gamemanager.doll = true;
                 break;
             default:
                 a1.SetActive(false);
