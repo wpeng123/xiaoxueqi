@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class progress4 : MonoBehaviour
 {
+    
     public static int level4 = 5;
     public GameObject a1;
     public GameObject a2;

@@ -28,6 +28,7 @@ public class gamemanager : MonoBehaviour
     public int[] stage2_wave5;
     public int[] stage2_wave6;
     public int[,,] stage_wave;
+    public static bool doll_catching=false;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -140,7 +141,7 @@ OnGameStateChanged?.Invoke(newState);
         await Task.Delay(10000);
         Debug.Log("stop");
         Time.timeScale = 0;
-        //await ×¥ÍÞÍÞ»úÏÔÊ¾
+        doll_catching = true;
 
 
     }
