@@ -11,9 +11,10 @@ public class BulletManager : MonoBehaviour
     public float rotationSpeed = 100f;
     public float damage;
     public float defaultZ;
+    public static int i = 10;
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         targetPosition = GameObject.Find("MechaBall").transform.position;
         Vector3 dir = targetPosition - transform.position;
         float angle = Vector3.SignedAngle(Vector3.up, dir, Vector3.forward);
@@ -38,7 +39,7 @@ public class BulletManager : MonoBehaviour
         playermove2 ifplayer = other.collider.GetComponent<playermove2>();
         if (ifplayer != null)
         {
-
+            i--;
             death();
         }
     }
