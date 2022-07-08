@@ -399,6 +399,7 @@ MonoBehaviour:
   counter: 0
   nearest_attack_distance: 0
   farthest_attack_distance: 0
+  retrear_speed_weight: 0
   bulletspeed: 15
   bulletscale: 1
   bulletDeathTime: 10
