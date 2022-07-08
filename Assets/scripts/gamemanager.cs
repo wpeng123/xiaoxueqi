@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
+using System.Threading;
 
 public class gamemanager : MonoBehaviour
 {
@@ -123,37 +124,36 @@ public class gamemanager : MonoBehaviour
 
     private void HandleVictory()
     {
-        throw new NotImplementedException();
+        
     }
 
     private void HandleDefeat()
     {
-        throw new NotImplementedException();
+        Debug.Log("defeat");
     }
 
     private void HandleUpdating()
     {
-        throw new NotImplementedException();
+        
     }
 
     private async void HandlePrize_Clawing()
     {
         await Task.Delay(10000);
         Debug.Log("stop");
-        //Time.timeScale = 0;
-        //await 抓娃娃机显示
 
 
     }
 
     private void HandlePlaying()
     {
-        Time.timeScale = 1;
-        Generating_enemy();
+        StartCoroutine("Generating_enemy");
+        //Generating_enemy();
         //UpdateGameState(Gamestate.Prize_Clawing);
     }
-    private async void Generating_enemy()
+    IEnumerator Generating_enemy()
     {
+        Time.timeScale = 1;
         for (int j = 0; j < 6; j++)
         {
             int count = 0;
@@ -193,23 +193,26 @@ public class gamemanager : MonoBehaviour
                         //Debug.Log("end");
                         break;
                     }
-                    //yield return new WaitForSeconds(enemys_delay);
-                    await Task.Delay((int)(enemys_delay * 1000));
+                    yield return new WaitForSeconds(enemys_delay);
                 }
+                yield return new WaitForSeconds(enemys_delay);
             }
             for (int i = 0; i < wave_max_interval; i++)
             {
-                //检测敌人是否被消灭完
-                /*if(over)
+                if (checkover())
                 {
                     break;
-                }*/
-                //yield return new WaitForSeconds(1.0f);
-                await Task.Delay((int)(1000));
+                }
+                yield return new WaitForSeconds(1);
             }
         }
+        stage++;
+        if (checkover())
+        {
+            UpdateGameState(Gamestate.Prize_Clawing);
+        }
     }
-    private void HandleTeaching()
+    void HandleTeaching()
     {
         //教学，下一个状态为
         UpdateGameState(Gamestate.Playing);
@@ -230,6 +233,15 @@ public class gamemanager : MonoBehaviour
         t = temp[a];
         temp[a] = temp[b];
         temp[b] = t;
+    }
+    bool checkover()
+    {
+        GameObject[] st = GameObject.FindGameObjectsWithTag("enemy_shooter");
+        GameObject[] sp = GameObject.FindGameObjectsWithTag("enemy_spider");
+        GameObject[] e = GameObject.FindGameObjectsWithTag("enemy");
+        if (st.Length + sp.Length + e.Length == 0)
+            return true;
+        return false;
     }
 }
 //this.GetType().GetField(str).GetValue(this).ToString()

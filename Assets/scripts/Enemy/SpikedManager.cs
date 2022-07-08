@@ -25,6 +25,7 @@ public class SpikedManager : MonoBehaviour
         playermove2 b = obj.GetComponent<playermove2>();
         if (b != null)
         {
+            b.health--;
             //Debug.Log("1");
             GameObject.Find("ShakeCameraManager").GetComponent<Tools>().ShakeScreen(0.2f, 0.01f);
             //Debug.Log("has collision");

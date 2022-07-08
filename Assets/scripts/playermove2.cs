@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 using static Tools;
 public class playermove2 : MonoBehaviour
 {
     public float minenergy;
     public float dump;
     public float maxpower;
-    public static float health;
+    public float health;
     float speed;
     float maxspeed;
     float energy;
     float basespeed;
+    public bool dead = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,34 +22,40 @@ public class playermove2 : MonoBehaviour
         maxspeed=maxpower/dump;
         energy = minenergy;
         basespeed = maxpower / minenergy;
+        health = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(health<=0)
+        if(!dead)
         {
-            //gamemanager.instance.UpdateGameState(gamemanager.Gamestate.Defeat);
+            if (health <= 0)
+            {
+                gamemanager.instance.UpdateGameState(gamemanager.Gamestate.Defeat);
+                dead = true;
+            }
+            speed = Mathf.Sqrt(Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.x, 2) + Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.y, 2));
+            //LookAt2D(this.GetComponent<Rigidbody2D>().velocity);
+            Tractive_force();
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+            float angle = Mathf.Atan2(vertical, horizontal);
+            float toward = Mathf.Sqrt(Mathf.Pow(horizontal, 2) + Mathf.Pow(vertical, 2));
+            if (!checkoverspeed())
+            {
+                this.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * toward * energy);
+                //Debug.Log(this.GetComponent<Rigidbody2D>().velocity);
+                //Debug.Log(speed);
+                //string str = "h:" + horizontal + " v:" + vertical;
+                //Debug.Log(str);
+            }
+            else
+            {
+                //this.GetComponent<Rigidbody2D>().AddForce(-this.GetComponent<Rigidbody2D>().drag);
+            }
         }
-        speed = Mathf.Sqrt(Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.x, 2) + Mathf.Pow(this.GetComponent<Rigidbody2D>().velocity.y, 2));
-        //LookAt2D(this.GetComponent<Rigidbody2D>().velocity);
-        Tractive_force();
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        float angle = Mathf.Atan2(vertical, horizontal);
-        float toward = Mathf.Sqrt(Mathf.Pow(horizontal, 2) + Mathf.Pow(vertical, 2));
-        if (!checkoverspeed())
-        {
-            this.GetComponent<Rigidbody2D>().AddForce(new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * toward * energy);
-            //Debug.Log(this.GetComponent<Rigidbody2D>().velocity);
-            //Debug.Log(speed);
-            //string str = "h:" + horizontal + " v:" + vertical;
-            //Debug.Log(str);
-        }
-        else
-        {
-            //this.GetComponent<Rigidbody2D>().AddForce(-this.GetComponent<Rigidbody2D>().drag);
-        }
+       
     }
     void OnCollisionEnter2D(Collision2D collisioninfo)
     {
