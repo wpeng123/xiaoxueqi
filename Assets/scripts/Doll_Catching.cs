@@ -6,17 +6,20 @@ public class Doll_Catching : MonoBehaviour
     Doll_Catching d;
 
     public GameObject scene1;
+    public static GameObject c; 
     public GameObject maincamara;
     public GameObject canvas;
     public GameObject upgradefinish;
     public GameObject all;
     public static bool a=false;
+    public static bool b = false;
     static bool doll;
 
     // Start is called before the first frame update
     private void Start()
     {
         d = this;
+        c = scene1;
     }
 
     // Update is called once per frame
@@ -41,5 +44,7 @@ public class Doll_Catching : MonoBehaviour
    public static void finish()
    {
         doll = false;
+        Doll_Catching.c.SetActive(false);
+        gamemanager.instance.UpdateGameState(gamemanager.Gamestate.Playing);
    }
 }

@@ -47,7 +47,7 @@ public class SpikeBallDeath : MonoBehaviour
 
     public void Death2()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
 }

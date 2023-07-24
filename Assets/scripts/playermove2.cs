@@ -22,7 +22,7 @@ public class playermove2 : MonoBehaviour
         maxspeed=maxpower/dump;
         energy = minenergy;
         basespeed = maxpower / minenergy;
-        health = 10;
+        health = 1000;
     }
 
     // Update is called once per frame

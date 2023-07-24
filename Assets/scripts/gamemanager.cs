@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 using System.Threading;
 
 public class gamemanager : MonoBehaviour
 {
+    public GameObject go;
     [HideInInspector] public static gamemanager instance;
     public Gamestate state;
     public float enemys_delay; //√Î
@@ -29,9 +31,17 @@ public class gamemanager : MonoBehaviour
     public int[] stage2_wave5;
     public int[] stage2_wave6;
     public int[,,] stage_wave;
+    public GameObject scene1;
+    public GameObject maincamara;
+    public GameObject canvas;
+    public GameObject upgradefinish;
+    public GameObject all;
+    public static bool a = true;
+    static bool doll;
     // Start is called before the first frame update
     private void Awake()
     {
+       
         instance = this;
         stage_wave = new int[2, 6, 5];
         for (int i = 0; i < 5; i++)
@@ -83,6 +93,7 @@ public class gamemanager : MonoBehaviour
             stage_wave[1, 5, i] = stage2_wave6[i];
         }
         Time.timeScale = 1;
+        go.SetActive(false);
         UpdateGameState(Gamestate.Playing);
     }
     void Start()
@@ -129,7 +140,15 @@ public class gamemanager : MonoBehaviour
 
     private void HandleDefeat()
     {
+        StartCoroutine("gameover");
         Debug.Log("defeat");
+    }
+
+    IEnumerator gameover()
+    {
+        go.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void HandleUpdating()
@@ -141,8 +160,18 @@ public class gamemanager : MonoBehaviour
     {
         await Task.Delay(10000);
         Debug.Log("stop");
-
-
+        if (a)
+        {
+            scene1.SetActive(true);
+            maincamara.SetActive(false);
+            canvas.SetActive(false);
+            all.SetActive(false);
+            a = false;
+        }
+        if (Doll_Catching.b)
+        {
+            UpdateGameState(Gamestate.Playing);
+        }
     }
 
     private void HandlePlaying()
@@ -207,9 +236,14 @@ public class gamemanager : MonoBehaviour
             }
         }
         stage++;
-        if (checkover())
-        {
-            UpdateGameState(Gamestate.Prize_Clawing);
+        while (true) {
+            yield return new WaitForSeconds(0.5f);
+            if (checkover())
+            {
+                Debug.Log(stage);
+                UpdateGameState(stage == 2 ? Gamestate.Prize_Clawing : Gamestate.Victory);
+                break;
+            }
         }
     }
     void HandleTeaching()
@@ -239,6 +273,7 @@ public class gamemanager : MonoBehaviour
         GameObject[] st = GameObject.FindGameObjectsWithTag("enemy_shooter");
         GameObject[] sp = GameObject.FindGameObjectsWithTag("enemy_spider");
         GameObject[] e = GameObject.FindGameObjectsWithTag("enemy");
+        Debug.Log(st.Length + sp.Length + e.Length);
         if (st.Length + sp.Length + e.Length == 0)
             return true;
         return false;
